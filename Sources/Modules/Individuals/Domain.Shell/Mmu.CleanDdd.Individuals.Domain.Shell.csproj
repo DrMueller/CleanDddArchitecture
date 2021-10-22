@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -7,6 +7,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\Domain.Shell\Mmu.CleanDdd.Shared.Domain.Shell.csproj" />
     <ProjectReference Include="..\Domain\Mmu.CleanDdd.Individuals.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\TypeConfigurations\Configs\" />
   </ItemGroup>
 
 </Project>

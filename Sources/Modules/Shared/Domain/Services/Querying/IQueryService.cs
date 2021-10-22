@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Mmu.CleanDdd.Shared.Domain.DomainModels;
+using Mmu.CleanDdd.Shared.Domain.Models;
 using Mmu.CleanDdd.Shared.Domain.Specifications;
 
-namespace Mmu.CleanDdd.Shared.Domain.DomainServices.Querying
+namespace Mmu.CleanDdd.Shared.Domain.Services.Querying
 {
     public interface IQueryService
     {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Mmu.CleanDdd.Individuals.Domain.Areas.Models;
-using Mmu.CleanDdd.Shared.Domain.Shell.Areas.TypeConfigurations.Base;
+using Mmu.CleanDdd.Shared.Domain.Shell.Areas.TypeConfigurations.BaseConfigs;
 
-namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.TypeConfigurations.Organisations
+namespace Mmu.CleanDdd.Individuals.Domain.Shell.Areas.TypeConfigurations
 {
     public class OrganisationConfig : EntityConfigBase<Organisation>
     {

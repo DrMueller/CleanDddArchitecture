@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Mmu.Cca.WebApi.Infrastructure.ExceptionHandling.Initialization;
+using Mmu.CleanDdd.WebApi.Infrastructure.ExceptionHandling.Initialization;
 
-namespace Mmu.Cca.WebApi.Infrastructure.Initialization
+namespace Mmu.CleanDdd.WebApi.Infrastructure.Initialization
 {
     internal static class AppInitialization
     {

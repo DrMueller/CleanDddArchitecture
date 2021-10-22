@@ -2,13 +2,13 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Mmu.CleanDdd.Shared.Domain.DomainModels;
-using Mmu.CleanDdd.Shared.Domain.DomainServices.Querying;
+using Mmu.CleanDdd.Shared.Domain.Models;
+using Mmu.CleanDdd.Shared.Domain.Services.Querying;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Factories;
 using Mmu.CleanDdd.Shared.Domain.Specifications;
 
-namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.Querying.Services.Implementation
+namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.Querying.Implementation
 {
     public class QueryService : IQueryService
     {

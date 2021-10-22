@@ -1,5 +1,5 @@
 ﻿using Lamar;
-using Mmu.CleanDdd.Shared.Domain.DomainServices.UnitOfWorks;
+using Mmu.CleanDdd.Shared.Domain.Services.UnitOfWorks;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Factories;
 
 namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.UnitOfWorks.Implementation

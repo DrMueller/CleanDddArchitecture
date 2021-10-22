@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Mmu.CleanDdd.Shared.IntegrationEvents
+﻿namespace Mmu.CleanDdd.Shared.IntegrationEvents
 {
     public class Class1
     {

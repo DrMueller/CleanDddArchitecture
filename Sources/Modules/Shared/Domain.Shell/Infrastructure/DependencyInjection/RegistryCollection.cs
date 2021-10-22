@@ -1,12 +1,12 @@
 ﻿using JetBrains.Annotations;
 using Lamar;
-using Mmu.CleanDdd.Shared.Domain.DomainServices.Querying;
-using Mmu.CleanDdd.Shared.Domain.DomainServices.Repositories;
-using Mmu.CleanDdd.Shared.Domain.DomainServices.UnitOfWorks;
+using Mmu.CleanDdd.Shared.Domain.Services.Querying;
+using Mmu.CleanDdd.Shared.Domain.Services.Repositories;
+using Mmu.CleanDdd.Shared.Domain.Services.UnitOfWorks;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts.Implementation;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Factories;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Factories.Implementation;
-using Mmu.CleanDdd.Shared.Domain.Shell.Areas.Querying.Services.Implementation;
+using Mmu.CleanDdd.Shared.Domain.Shell.Areas.Querying.Implementation;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.UnitOfWorks.Implementation;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.UnitOfWorks.Servants;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.UnitOfWorks.Servants.Implementation;

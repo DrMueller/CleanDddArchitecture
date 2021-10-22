@@ -1,4 +1,4 @@
-﻿namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.TypeConfigurations
+﻿namespace Mmu.CleanDdd.Individuals.Domain.Shell.Areas.TypeConfigurations
 {
     public static class Schemas
     {

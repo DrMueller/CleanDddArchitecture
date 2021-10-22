@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Mmu.CleanDdd.CrossCutting.Areas.Settings.Services;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts.Implementation;
-using Mmu.CleanDdd.Shared.Domain.Shell.Areas.TypeConfigurations.Base;
+using Mmu.CleanDdd.Shared.Domain.Shell.Areas.TypeConfigurations.BaseConfigs;
+using Mmu.CleanDdd.Shared.Domain.Shell.Areas.TypeConfigurations.ConfigProvisioning;
 
 namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Factories.Implementation
 {
@@ -12,10 +14,14 @@ namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Factories.Implementa
     {
         private readonly IAppSettingsProvider _appSettingsProvider;
         private readonly Lazy<DbContextOptions> _lazyOptions;
+        private readonly IEnumerable<ITypeConfigAssemblyProvider> typeConfigAssemblyProviders;
 
-        public AppDbContextFactory(IAppSettingsProvider appSettingsProvider)
+        public AppDbContextFactory(
+            IAppSettingsProvider appSettingsProvider,
+            IEnumerable<ITypeConfigAssemblyProvider> typeConfigAssemblyProviders)
         {
             _appSettingsProvider = appSettingsProvider;
+            this.typeConfigAssemblyProviders = typeConfigAssemblyProviders;
             _lazyOptions = new Lazy<DbContextOptions>(CreateDbContextOptions);
         }
 
@@ -29,7 +35,13 @@ namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Factories.Implementa
             var configuration = SqlServerConventionSetBuilder.Build();
             var mb = new ModelBuilder(configuration);
             var entityConfigAssembly = typeof(EntityConfigBase<>).Assembly;
-            mb.ApplyConfigurationsFromAssembly(entityConfigAssembly);
+
+            foreach (var prov in typeConfigAssemblyProviders)
+            {
+                var assembly = prov.Provide();
+                mb.ApplyConfigurationsFromAssembly(assembly);
+            }
+
             mb.FinalizeModel();
 
             return new DbContextOptionsBuilder()

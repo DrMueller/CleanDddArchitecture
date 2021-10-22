@@ -13,8 +13,8 @@ namespace Mmu.CleanDdd.Individuals.Application.Areas.UseCases.LoadAllIndividuals
 
         public string GenderDescription { get; set; }
 
-        public string LastName { get; set; }
-
         public long IndividualId { get; set; }
+
+        public string LastName { get; set; }
     }
 }

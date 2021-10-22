@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Mmu.CleanDdd.Shared.Domain.DomainServices.Repositories;
+using Mmu.CleanDdd.Shared.Domain.Services.Repositories;
 
-namespace Mmu.CleanDdd.Shared.Domain.DomainServices.UnitOfWorks
+namespace Mmu.CleanDdd.Shared.Domain.Services.UnitOfWorks
 {
     public interface IUnitOfWork : IDisposable
     {

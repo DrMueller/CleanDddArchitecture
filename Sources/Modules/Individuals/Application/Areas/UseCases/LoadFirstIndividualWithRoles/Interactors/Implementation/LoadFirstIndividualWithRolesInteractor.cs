@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.LoadFirstIndividualWithRoles.Dtos;
 using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.LoadFirstIndividualWithRoles.Specs;
-using Mmu.CleanDdd.Shared.Domain.DomainServices.Querying;
+using Mmu.CleanDdd.Shared.Domain.Services.Querying;
 
 namespace Mmu.CleanDdd.Individuals.Application.Areas.UseCases.LoadFirstIndividualWithRoles.Interactors.Implementation
 {

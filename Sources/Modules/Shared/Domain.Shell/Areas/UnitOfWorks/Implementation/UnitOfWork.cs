@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Mmu.CleanDdd.Shared.Domain.DomainModels;
-using Mmu.CleanDdd.Shared.Domain.DomainServices.Repositories;
-using Mmu.CleanDdd.Shared.Domain.DomainServices.UnitOfWorks;
+using Mmu.CleanDdd.Shared.Domain.Models;
+using Mmu.CleanDdd.Shared.Domain.Services.Repositories;
+using Mmu.CleanDdd.Shared.Domain.Services.UnitOfWorks;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.UnitOfWorks.Servants;
 

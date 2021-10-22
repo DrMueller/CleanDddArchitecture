@@ -2,7 +2,7 @@
 using JetBrains.Annotations;
 using Mmu.CleanDdd.CrossCutting.Areas.LanguageExtensions.Invariance;
 
-namespace Mmu.Cca.WebApi.Infrastructure.ExceptionHandling.Models
+namespace Mmu.CleanDdd.WebApi.Infrastructure.ExceptionHandling.Models
 {
     [PublicAPI]
     public class ServerError

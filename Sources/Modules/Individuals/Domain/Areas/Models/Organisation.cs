@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Mmu.CleanDdd.Shared.Domain.DomainModels;
+using Mmu.CleanDdd.Shared.Domain.Models;
 
 namespace Mmu.CleanDdd.Individuals.Domain.Areas.Models
 {

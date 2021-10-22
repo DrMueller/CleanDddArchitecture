@@ -5,11 +5,11 @@ using System.Net.Mime;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Microsoft.AspNetCore.Http;
-using Mmu.Cca.WebApi.Infrastructure.ExceptionHandling.Models;
 using Mmu.CleanDdd.CrossCutting.Areas.Logging.Services;
+using Mmu.CleanDdd.WebApi.Infrastructure.ExceptionHandling.Models;
 using Newtonsoft.Json;
 
-namespace Mmu.Cca.WebApi.Infrastructure.ExceptionHandling.Middlewares
+namespace Mmu.CleanDdd.WebApi.Infrastructure.ExceptionHandling.Middlewares
 {
     [PublicAPI]
     internal class GlobalExceptionHandlingMiddleware

@@ -1,4 +1,4 @@
-﻿namespace Mmu.CleanDdd.Shared.Domain.DomainModels
+﻿namespace Mmu.CleanDdd.Shared.Domain.Models
 {
     public abstract class AggregateRoot : Entity
     {

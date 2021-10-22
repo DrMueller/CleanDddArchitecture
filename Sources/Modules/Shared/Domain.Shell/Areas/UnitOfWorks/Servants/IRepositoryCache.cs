@@ -1,5 +1,5 @@
 ﻿using System;
-using Mmu.CleanDdd.Shared.Domain.DomainServices.Repositories;
+using Mmu.CleanDdd.Shared.Domain.Services.Repositories;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts;
 
 namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.UnitOfWorks.Servants

@@ -1,7 +1,9 @@
-﻿using Lamar;
+﻿using JetBrains.Annotations;
+using Lamar;
 
-namespace Mmu.CleanDdd.WebApi.Infrastructure.DependencyInjection
+namespace Mmu.CleanDdd.Individuals.Domain.Shell.Infrastructure.DependencyInjection
 {
+    [UsedImplicitly]
     public class RegistryCollection : ServiceRegistry
     {
         public RegistryCollection()

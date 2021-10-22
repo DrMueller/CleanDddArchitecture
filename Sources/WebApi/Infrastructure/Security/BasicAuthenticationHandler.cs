@@ -11,7 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Mmu.CleanDdd.CrossCutting.Areas.Settings.Services;
 
-namespace Mmu.Cca.WebApi.Infrastructure.Security
+namespace Mmu.CleanDdd.WebApi.Infrastructure.Security
 {
     public class BasicAuthenticationHandler : AuthenticationHandler<AuthenticationSchemeOptions>
     {

@@ -1,9 +1,9 @@
 ﻿using JetBrains.Annotations;
 using Microsoft.AspNetCore.Builder;
-using Mmu.Cca.WebApi.Infrastructure.ExceptionHandling.Middlewares;
 using Mmu.CleanDdd.CrossCutting.Areas.LanguageExtensions.Invariance;
+using Mmu.CleanDdd.WebApi.Infrastructure.ExceptionHandling.Middlewares;
 
-namespace Mmu.Cca.WebApi.Infrastructure.ExceptionHandling.Initialization
+namespace Mmu.CleanDdd.WebApi.Infrastructure.ExceptionHandling.Initialization
 {
     [PublicAPI]
     public static class ApplicationInitialization

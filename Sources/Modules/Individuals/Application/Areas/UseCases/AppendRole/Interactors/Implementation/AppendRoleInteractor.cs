@@ -3,7 +3,7 @@ using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.AppendRole.Dtos;
 using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.AppendRole.Specs;
 using Mmu.CleanDdd.Individuals.Domain.Areas.Models;
 using Mmu.CleanDdd.Individuals.Domain.Areas.Repositories;
-using Mmu.CleanDdd.Shared.Domain.DomainServices.UnitOfWorks;
+using Mmu.CleanDdd.Shared.Domain.Services.UnitOfWorks;
 
 namespace Mmu.CleanDdd.Individuals.Application.Areas.UseCases.AppendRole.Interactors.Implementation
 {

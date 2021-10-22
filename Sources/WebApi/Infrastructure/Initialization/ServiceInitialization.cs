@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using Mmu.Cca.WebApi.Infrastructure.Security;
 using Mmu.CleanDdd.CrossCutting.Areas.Settings.Models;
+using Mmu.CleanDdd.WebApi.Infrastructure.Security;
 
-namespace Mmu.Cca.WebApi.Infrastructure.Initialization
+namespace Mmu.CleanDdd.WebApi.Infrastructure.Initialization
 {
     internal static class ServiceInitialization
     {

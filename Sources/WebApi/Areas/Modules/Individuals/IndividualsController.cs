@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -36,7 +34,7 @@ namespace Mmu.CleanDdd.WebApi.Areas.Modules.Individuals
         public async Task<IActionResult> AppendRoleAsync([FromRoute] long individualId, [FromBody] AppendRoleRequestDto dto)
         {
             await
-                this.individualsModule
+                individualsModule
                     .GetInteractor<IAppendRoleInteractor>()
                     .ExecuteAsync(individualId, dto);
 
@@ -46,52 +44,51 @@ namespace Mmu.CleanDdd.WebApi.Areas.Modules.Individuals
         [HttpPost]
         public async Task<ActionResult<CreateIndividualResultDto>> CreateIndividualAsync(CreateIndividualRequestDto dto)
         {
-            var result = await this.individualsModule
+            var result = await individualsModule
                 .GetInteractor<ICreateIndividualInteractor>()
                 .ExecuteAsync(dto);
 
             return Ok(result);
         }
 
-        [HttpGet]
-        public async Task<ActionResult<IReadOnlyCollection<IndividualResultDto>>> LoadAllAsync()
-        {
-            var allIndividuals = await this.individualsModule
-                    .GetInteractor<ILoadAllIndividualsInteractor>()
-                    .ExecuteAsync();
-
-            return Ok(allIndividuals);
-        }
-
-        [HttpPut("{individualId:long}")]
-        public async Task<IActionResult> UpdateIndividualAsync([FromRoute] long individualId, [FromBody] IndividualToUpdateDto dto)
-        { 
-            await this.individualsModule
-                .GetInteractor<IUpdateIndividualInteractor>()
-                .ExecuteAsync(individualId, dto);
-
-            return Ok();
-        }
-
         [HttpDelete("{individualId:long}")]
         public async Task<IActionResult> DeleteIndividualAsync([FromRoute] long individualId)
         {
-            await this.individualsModule
+            await individualsModule
                 .GetInteractor<IDeleteIndividualInteractor>()
                 .ExecuteAsync(individualId);
 
             return Ok();
         }
 
+        [HttpGet]
+        public async Task<ActionResult<IReadOnlyCollection<IndividualResultDto>>> LoadAllAsync()
+        {
+            var allIndividuals = await individualsModule
+                .GetInteractor<ILoadAllIndividualsInteractor>()
+                .ExecuteAsync();
+
+            return Ok(allIndividuals);
+        }
 
         [HttpGet("first")]
         public async Task<ActionResult<IndividualWithRolesDto>> LoadFirstIndividualWithRolesASync()
         {
-            var individualWithRoles = await this.individualsModule
-                    .GetInteractor<ILoadFirstIndividualWithRolesInteractor>()
-                    .ExecuteAsync();
+            var individualWithRoles = await individualsModule
+                .GetInteractor<ILoadFirstIndividualWithRolesInteractor>()
+                .ExecuteAsync();
 
             return Ok(individualWithRoles);
+        }
+
+        [HttpPut("{individualId:long}")]
+        public async Task<IActionResult> UpdateIndividualAsync([FromRoute] long individualId, [FromBody] IndividualToUpdateDto dto)
+        {
+            await individualsModule
+                .GetInteractor<IUpdateIndividualInteractor>()
+                .ExecuteAsync(individualId, dto);
+
+            return Ok();
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Mmu.CleanDdd.Shared.Domain.DomainModels
+namespace Mmu.CleanDdd.Shared.Domain.Models
 {
     public abstract class ValueObject<T> : IEquatable<T>
         where T : ValueObject<T>
@@ -15,6 +15,7 @@ namespace Mmu.CleanDdd.Shared.Domain.DomainModels
             }
 
             var other = obj as T;
+
             return Equals(other);
         }
 
@@ -66,6 +67,7 @@ namespace Mmu.CleanDdd.Shared.Domain.DomainModels
             foreach (var field in fields)
             {
                 var value = field.GetValue(this);
+
                 if (value == null)
                 {
                     continue;
@@ -76,6 +78,20 @@ namespace Mmu.CleanDdd.Shared.Domain.DomainModels
             }
 
             return hashCode;
+        }
+
+        private IEnumerable<FieldInfo> GetFields()
+        {
+            var currentType = GetType();
+            var fields = new List<FieldInfo>();
+
+            while (currentType != typeof(object))
+            {
+                fields.AddRange(currentType.GetFields(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public));
+                currentType = currentType.GetTypeInfo().BaseType;
+            }
+
+            return fields;
         }
 
         public static bool operator ==(ValueObject<T> x, ValueObject<T> y)
@@ -96,20 +112,6 @@ namespace Mmu.CleanDdd.Shared.Domain.DomainModels
         public static bool operator !=(ValueObject<T> x, ValueObject<T> y)
         {
             return !(x == y);
-        }
-
-        private IEnumerable<FieldInfo> GetFields()
-        {
-            var currentType = GetType();
-            var fields = new List<FieldInfo>();
-
-            while (currentType != typeof(object))
-            {
-                fields.AddRange(currentType.GetFields(BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public));
-                currentType = currentType.GetTypeInfo().BaseType;
-            }
-
-            return fields;
         }
     }
 }

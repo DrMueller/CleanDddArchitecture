@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
-using Mmu.CleanDdd.Shared.Domain.DomainModels;
+using Mmu.CleanDdd.Shared.Domain.Models;
 using Mmu.CleanDdd.Shared.Domain.Specifications;
 
-namespace Mmu.CleanDdd.Shared.Domain.DomainServices.Repositories
+namespace Mmu.CleanDdd.Shared.Domain.Services.Repositories
 {
     [SuppressMessage("Design", "CA1040:Avoid empty interfaces", Justification = "Marker interface for easier generic handling")]
     public interface IRepository

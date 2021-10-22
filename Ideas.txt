@@ -10,6 +10,8 @@
 - Integration Events
 - Domain Events
 - ArchTests anschauen und übernehmen
-
-
 - Specification sind im Application Layer, aber eigentlich Business Logik?
+
+# Dokumentieren
+
+- Interactor für Application Layer

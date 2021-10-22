@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Mmu.CleanDdd.Shared.Domain.DomainModels;
+using Mmu.CleanDdd.Shared.Domain.Models;
 
-namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.TypeConfigurations.Base
+namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.TypeConfigurations.BaseConfigs
 {
     public abstract class EntityConfigBase<T> : IEntityTypeConfiguration<T>
         where T : Entity

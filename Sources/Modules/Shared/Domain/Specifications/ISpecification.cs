@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Linq.Expressions;
-using Mmu.CleanDdd.Shared.Domain.DomainModels;
+using Mmu.CleanDdd.Shared.Domain.Models;
 
 namespace Mmu.CleanDdd.Shared.Domain.Specifications
 {
