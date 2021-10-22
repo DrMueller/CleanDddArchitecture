@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Modules\Individuals\Application.Shell\Mmu.CleanDdd.Individuals.Application.Shell.csproj" />
+    <ProjectReference Include="..\..\Modules\Individuals\Domain.Shell\Mmu.CleanDdd.Individuals.Domain.Shell.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+# DataAccess
+
+- Db Context pro Module mit Rechten nur auf Schema
+- Wie macht das Beispiel das mit den Entities FK etc
+- Entities Foreign Keys besser dokumentieren
+
+# Sonstiges
+
+
+- Integration Events
+- Domain Events
+- ArchTests anschauen und übernehmen
+
+
+- Specification sind im Application Layer, aber eigentlich Business Logik?

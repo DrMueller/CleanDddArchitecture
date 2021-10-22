@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Events\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\CrossCutting\Mmu.CleanDdd.CrossCutting.csproj" />
+    <ProjectReference Include="..\..\Shared\Domain\Mmu.CleanDdd.Shared.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
