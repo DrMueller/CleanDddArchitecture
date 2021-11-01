@@ -3,7 +3,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.LoadAllIndividuals.Dtos;
 using Mmu.CleanDdd.Individuals.Domain.Areas.Models;
-using Mmu.CleanDdd.Shared.Domain.Specifications;
+using Mmu.CleanDdd.Shared.Domain.Areas.Specifications;
 
 namespace Mmu.CleanDdd.Individuals.Application.Areas.UseCases.LoadAllIndividuals.Specs
 {

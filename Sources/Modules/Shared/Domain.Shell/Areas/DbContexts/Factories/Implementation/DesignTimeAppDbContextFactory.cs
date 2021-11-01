@@ -1,22 +1,41 @@
-﻿using JetBrains.Annotations;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
-using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts.Implementation;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
+//using Lamar;
+//using Microsoft.EntityFrameworkCore.Design;
+//using Microsoft.Extensions.DependencyInjection;
+//using Mmu.CleanDdd.CrossCutting.Areas.Settings.Config.Services.Implementation;
+//using Mmu.CleanDdd.CrossCutting.Areas.Settings.Models;
+//using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts.Implementation;
 
-namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Factories.Implementation
-{
-    [UsedImplicitly]
-    public class DesignTimeAppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
-    {
-        public AppDbContext CreateDbContext(string[] args)
-        {
-            const string ConnectionString = "server=localhost\\sqlexpress;database=CleanArchitecture;Trusted_Connection=True;Max Pool Size = 500;Pooling = True; MultipleActiveResultSets = True";
+//namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Factories.Implementation
+//{
+//    public class DesignTimeAppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
+//    {
+//        public AppDbContext CreateDbContext(string[] args)
+//        {
+//            var container = CreateContainer();
 
-            var options = new DbContextOptionsBuilder()
-                .UseSqlServer(ConnectionString)
-                .Options;
+//            var appDbContextFactory = container.GetInstance<IAppDbContextFactory>();
+//            return (AppDbContext)appDbContextFactory.Create();
+//        }
 
-            return new AppDbContext(options);
-        }
-    }
-}
+//        private static IContainer CreateContainer()
+//        {
+//            return new Container(cfg =>
+//            {
+//                cfg.Scan(scanner =>
+//                {
+//                    scanner.AssembliesFromApplicationBaseDirectory();
+//                    scanner.LookForRegistries();
+//                });
+
+//                var config = ConfigurationFactory.Create(typeof(DesignTimeAppDbContextFactory).Assembly);
+//                cfg.Configure<AppSettings>(config.GetSection(AppSettings.SectionKey));
+//            });
+//        }
+//    }
+//}
+

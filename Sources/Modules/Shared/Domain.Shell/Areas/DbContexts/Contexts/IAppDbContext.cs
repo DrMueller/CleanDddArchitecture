@@ -9,7 +9,7 @@ namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts
 {
     public interface IAppDbContext : IDisposable
     {
-        ChangeTracker ChangeTrackerr { get; }
+        ChangeTracker ChangeTracker { get; }
 
         Task<int> SaveChangesAsync(CancellationToken token = default);
 

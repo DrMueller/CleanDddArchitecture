@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Mmu.CleanDdd.Shared.Domain.Models;
-using Mmu.CleanDdd.Shared.Domain.Services.Repositories;
+using Mmu.CleanDdd.Shared.Domain.Areas.Models;
+using Mmu.CleanDdd.Shared.Domain.Areas.Services.Repositories;
+using Mmu.CleanDdd.Shared.Domain.Areas.Specifications;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts;
-using Mmu.CleanDdd.Shared.Domain.Specifications;
 
 namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.Repositories.Base
 {

@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using Mmu.CleanDdd.Shared.Domain.Models;
+using Mmu.CleanDdd.Shared.Domain.Areas.Models;
 
 namespace Mmu.CleanDdd.Individuals.Domain.Areas.Models
 {
@@ -13,6 +12,5 @@ namespace Mmu.CleanDdd.Individuals.Domain.Areas.Models
         public Gender Gender { get; set; }
 
         public string LastName { get; set; }
-        public ICollection<Role> Roles { get; set; }
     }
 }

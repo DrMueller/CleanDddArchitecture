@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Mmu.CleanDdd.CrossCutting.Areas.Settings.Services;
+using Mmu.CleanDdd.CrossCutting.Areas.Settings.Provisioning.Services;
 
 namespace Mmu.CleanDdd.WebApi.Infrastructure.Security
 {

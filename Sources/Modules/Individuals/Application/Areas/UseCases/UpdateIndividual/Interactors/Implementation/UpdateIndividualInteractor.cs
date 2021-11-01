@@ -2,7 +2,7 @@
 using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.UpdateIndividual.Dtos;
 using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.UpdateIndividual.Specs;
 using Mmu.CleanDdd.Individuals.Domain.Areas.Repositories;
-using Mmu.CleanDdd.Shared.Domain.Services.UnitOfWorks;
+using Mmu.CleanDdd.Shared.Domain.Areas.Services.UnitOfWorks;
 
 namespace Mmu.CleanDdd.Individuals.Application.Areas.UseCases.UpdateIndividual.Interactors.Implementation
 {

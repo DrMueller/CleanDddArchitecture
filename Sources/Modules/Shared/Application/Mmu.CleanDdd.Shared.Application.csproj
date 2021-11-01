@@ -9,4 +9,8 @@
     <PackageReference Include="Lamar" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\CrossCutting\Mmu.CleanDdd.CrossCutting.csproj" />
+  </ItemGroup>
+
 </Project>

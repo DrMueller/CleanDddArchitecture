@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using Mmu.CleanDdd.Individuals.Domain.Areas.Models;
-using Mmu.CleanDdd.Shared.Domain.Specifications;
+using Mmu.CleanDdd.Shared.Domain.Areas.Specifications;
 
 namespace Mmu.CleanDdd.Individuals.Application.Areas.UseCases.UpdateIndividual.Specs
 {

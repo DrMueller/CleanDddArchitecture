@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Mmu.CleanDdd.Shared.Domain.Models;
-using Mmu.CleanDdd.Shared.Domain.Services.Repositories;
-using Mmu.CleanDdd.Shared.Domain.Services.UnitOfWorks;
+using Mmu.CleanDdd.Shared.Domain.Areas.Models;
+using Mmu.CleanDdd.Shared.Domain.Areas.Services.Repositories;
+using Mmu.CleanDdd.Shared.Domain.Areas.Services.UnitOfWorks;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.UnitOfWorks.Servants;
 
@@ -45,18 +45,22 @@ namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.UnitOfWorks.Implementation
 
         private void SetTechnicalFields()
         {
-            var entries = _dbContext.ChangeTrackerr
+            var entries = _dbContext
+                .ChangeTracker
                 .Entries()
                 .Where(
                     e => e.State is EntityState.Added or EntityState.Modified);
 
             foreach (var entityEntry in entries)
             {
-                ((Entity)entityEntry.Entity).UpdatedDate = DateTime.Now;
-
-                if (entityEntry.State == EntityState.Added)
+                if (entityEntry.Entity is Entity entity)
                 {
-                    ((Entity)entityEntry.Entity).CreatedDate = DateTime.Now;
+                    entity.UpdatedDate = DateTime.Now;
+                }
+
+                if (entityEntry.State == EntityState.Added && entityEntry.Entity is IHasCreatedDate cd)
+                {
+                    cd.CreatedDate = DateTime.Now;
                 }
             }
         }

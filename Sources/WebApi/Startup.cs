@@ -1,8 +1,7 @@
-using System.IO;
-using System.Reflection;
 using Lamar;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
+using Mmu.CleanDdd.CrossCutting.Areas.Settings.Config.Services;
 using Mmu.CleanDdd.WebApi.Infrastructure.Initialization;
 
 namespace Mmu.CleanDdd.WebApi
@@ -11,14 +10,7 @@ namespace Mmu.CleanDdd.WebApi
     {
         public Startup()
         {
-            var runDir = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
-
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(runDir)
-                .AddJsonFile("appsettings.json", false, true)
-                .AddEnvironmentVariables();
-
-            Configuration = builder.Build();
+            Configuration = ConfigurationFactory.Create(typeof(Startup).Assembly);
         }
 
         private IConfiguration Configuration { get; }

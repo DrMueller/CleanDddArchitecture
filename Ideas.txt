@@ -1,17 +1,4 @@
-# DataAccess
+# Ansätze
 
-- Db Context pro Module mit Rechten nur auf Schema
-- Wie macht das Beispiel das mit den Entities FK etc
-- Entities Foreign Keys besser dokumentieren
-
-# Sonstiges
-
-
-- Integration Events
-- Domain Events
-- ArchTests anschauen und übernehmen
-- Specification sind im Application Layer, aber eigentlich Business Logik?
-
-# Dokumentieren
-
-- Interactor für Application Layer
+- Datenbank sollte trotzdem in sich geschlossen querybar sein
+- EF Core Konfiguration umkehren? Wegen Aggregate Roots und OwnsOne etc.

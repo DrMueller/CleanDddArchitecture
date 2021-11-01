@@ -1,5 +1,5 @@
 ﻿using Mmu.CleanDdd.Individuals.Domain.Areas.Models;
-using Mmu.CleanDdd.Shared.Domain.Services.Repositories;
+using Mmu.CleanDdd.Shared.Domain.Areas.Services.Repositories;
 
 namespace Mmu.CleanDdd.Individuals.Domain.Areas.Repositories
 {

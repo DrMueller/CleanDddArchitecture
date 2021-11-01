@@ -4,7 +4,7 @@ using System.Linq;
 using JetBrains.Annotations;
 using Lamar;
 using Mmu.CleanDdd.CrossCutting.Areas.LanguageExtensions.FunctionResults;
-using Mmu.CleanDdd.Shared.Domain.Services.Repositories;
+using Mmu.CleanDdd.Shared.Domain.Areas.Services.Repositories;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.DbContexts.Contexts;
 using Mmu.CleanDdd.Shared.Domain.Shell.Areas.Repositories.Base;
 
