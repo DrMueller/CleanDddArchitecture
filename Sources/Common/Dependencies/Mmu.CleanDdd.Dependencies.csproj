@@ -5,11 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Mmu.CleanDdd.DataAccess\Mmu.CleanDdd.DataAccess.csproj" />
-    <ProjectReference Include="..\..\..\Mmu.CleanDdd.Meetings.Application.Shell\Mmu.CleanDdd.Meetings.Application.Shell.csproj" />
-    <ProjectReference Include="..\..\..\Mmu.CleanDdd.Meetings.Domain.Shell\Mmu.CleanDdd.Meetings.Domain.Shell.csproj" />
-    <ProjectReference Include="..\..\Modules\Individuals\Application.Shell\Mmu.CleanDdd.Individuals.Application.Shell.csproj" />
-    <ProjectReference Include="..\..\Modules\Individuals\Domain.Shell\Mmu.CleanDdd.Individuals.Domain.Shell.csproj" />
+    <ProjectReference Include="..\..\Modules\Shared\Application.Shell\Mmu.CleanDdd.Shared.Application.Shell.csproj" />
+    <ProjectReference Include="..\..\Modules\Shared\Domain.Shell\Mmu.CleanDdd.Shared.Domain.Shell.csproj" />
   </ItemGroup>
 
 </Project>

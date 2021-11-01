@@ -15,9 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mmu.CleanDdd.Meetings.Domain.Shell\Mmu.CleanDdd.Meetings.Domain.Shell.csproj" />
-    <ProjectReference Include="..\Sources\Common\CrossCutting\Mmu.CleanDdd.CrossCutting.csproj" />
-    <ProjectReference Include="..\Sources\Modules\Individuals\Domain.Shell\Mmu.CleanDdd.Individuals.Domain.Shell.csproj" />
+    <ProjectReference Include="..\Modules\Individuals\Domain.Shell\Mmu.CleanDdd.Individuals.Domain.Shell.csproj" />
+    <ProjectReference Include="..\Modules\Meetings\Domain.Shell\Mmu.CleanDdd.Meetings.Domain.Shell.csproj" />
   </ItemGroup>
 
 </Project>

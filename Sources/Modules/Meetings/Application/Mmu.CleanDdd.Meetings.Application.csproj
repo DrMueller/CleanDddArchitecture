@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Folder Include="Areas\UseCases\Participants\AddParticipant\Specs\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\..\Shared\Application\Mmu.CleanDdd.Shared.Application.csproj" />
+	  <ProjectReference Include="..\Domain\Mmu.CleanDdd.Meetings.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

@@ -11,10 +11,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\Mmu.CleanDdd.Meetings.Application\Mmu.CleanDdd.Meetings.Application.csproj" />
-		<ProjectReference Include="..\Common\CrossCutting\Mmu.CleanDdd.CrossCutting.csproj" />
 		<ProjectReference Include="..\Common\Dependencies\Mmu.CleanDdd.Dependencies.csproj" />
 		<ProjectReference Include="..\Modules\Individuals\Application\Mmu.CleanDdd.Individuals.Application.csproj" />
+		<ProjectReference Include="..\Modules\Meetings\Application\Mmu.CleanDdd.Meetings.Application.csproj" />
 	</ItemGroup>
 
 </Project>
