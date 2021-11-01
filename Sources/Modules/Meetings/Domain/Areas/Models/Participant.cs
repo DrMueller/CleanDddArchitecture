@@ -8,13 +8,14 @@ namespace Mmu.CleanDdd.Meetings.Domain.Areas.Models
 
         public Participant(string name)
         {
-            Name = name;
+            _name = name;
         }
 
         public Participant()
         {
         }
 
-        public string Name { get; }
+        private string _name;
+        public string Name => _name;
     }
 }

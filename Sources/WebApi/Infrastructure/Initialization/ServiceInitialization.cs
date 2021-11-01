@@ -1,10 +1,13 @@
 ﻿using System.Collections.Generic;
 using Lamar;
+using MediatR;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Mmu.CleanDdd.CrossCutting.Areas.Settings.Provisioning.Models;
+using Mmu.CleanDdd.Individuals.Application.Areas.Module;
+using Mmu.CleanDdd.Meetings.Application.Areas.Module;
 using Mmu.CleanDdd.WebApi.Infrastructure.Security;
 
 namespace Mmu.CleanDdd.WebApi.Infrastructure.Initialization
@@ -20,6 +23,8 @@ namespace Mmu.CleanDdd.WebApi.Infrastructure.Initialization
                     scanner.LookForRegistries();
                 });
 
+            services.AddMediatR(typeof(IIndividualsModule));
+            services.AddMediatR(typeof(IMeetingsModule));
             services.AddControllers();
             services.Configure<AppSettings>(configuration.GetSection(AppSettings.SectionKey));
 

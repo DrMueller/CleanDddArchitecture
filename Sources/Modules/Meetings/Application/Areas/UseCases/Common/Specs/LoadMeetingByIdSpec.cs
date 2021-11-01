@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Mmu.CleanDdd.Meetings.Domain.Areas.Models;
 using Mmu.CleanDdd.Shared.Domain.Areas.Specifications;
 
-namespace Mmu.CleanDdd.Meetings.Application.Areas.UseCases.Agenda.AddAgendaPoint.Specs
+namespace Mmu.CleanDdd.Meetings.Application.Areas.UseCases.Common.Specs
 {
     public class LoadMeetingByIdSpec : ISpecification<Meeting>
     {

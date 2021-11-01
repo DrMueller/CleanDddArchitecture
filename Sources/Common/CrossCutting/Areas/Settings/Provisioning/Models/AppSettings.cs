@@ -10,5 +10,7 @@ namespace Mmu.CleanDdd.CrossCutting.Areas.Settings.Provisioning.Models
         public string ConnectionString { get; set; }
 
         public SecuritySettings SecuritySettings { get; set; }
+
+        public EmailSettings EmailSettings { get; set; }
     }
 }

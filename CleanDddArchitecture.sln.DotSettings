@@ -13,6 +13,8 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=4C1CB5D3_002D3CD5_002D41BD_002D9F1F_002D06E6E44EECC8_002Fd_003AAreas_002Fd_003AJobPositions_002Fd_003AImport_002Fd_003ADtos/@EntryIndexedValue">ExplicitlyExcluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=65DA3118_002D5D8D_002D4D59_002D97D2_002D3E0568F3917A_002Fd_003AMigrations/@EntryIndexedValue">ExplicitlyExcluded</s:String>
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=C11BE2EC_002D1E93_002D46DE_002D8ED0_002D3DFF45BD0F19_002Fd_003AMigrations/@EntryIndexedValue">ExplicitlyExcluded</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/GeneratedFilesAndFolders/=4FF3038C_002D1660_002D489D_002DBA84_002DC91193B34AE8_002Fd_003AAreas_002Fd_003AModels/@EntryIndexedValue">4FF3038C-1660-489D-BA84-C91193B34AE8/d:Areas/d:Models</s:String>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/GeneratedFilesAndFolders/=88C34AA9_002DD8FB_002D4005_002DBB3F_002DE0942E3FA195_002Fd_003AAreas_002Fd_003AModels/@EntryIndexedValue">88C34AA9-D8FB-4005-BB3F-E0942E3FA195/d:Areas/d:Models</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/AnalysisEnabled/@EntryValue">SOLUTION</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=ArrangeAccessorOwnerBody/@EntryIndexedValue">WARNING</s:String>
 	<s:String x:Key="/Default/CodeInspection/Highlighting/InspectionSeverities/=ArrangeConstructorOrDestructorBody/@EntryIndexedValue">WARNING</s:String>

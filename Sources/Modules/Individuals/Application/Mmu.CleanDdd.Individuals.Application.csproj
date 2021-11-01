@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Meetings\IntegrationEvents\Mmu.CleanDdd.Meetings.IntegrationEvents.csproj" />
     <ProjectReference Include="..\..\Shared\Application\Mmu.CleanDdd.Shared.Application.csproj" />
     <ProjectReference Include="..\Domain\Mmu.CleanDdd.Individuals.Domain.csproj" />
   </ItemGroup>

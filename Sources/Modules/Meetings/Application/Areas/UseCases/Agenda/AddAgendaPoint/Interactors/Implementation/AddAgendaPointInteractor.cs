@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Mmu.CleanDdd.Meetings.Application.Areas.UseCases.Agenda.AddAgendaPoint.Dtos;
-using Mmu.CleanDdd.Meetings.Application.Areas.UseCases.Agenda.AddAgendaPoint.Specs;
+using Mmu.CleanDdd.Meetings.Application.Areas.UseCases.Common.Specs;
 using Mmu.CleanDdd.Meetings.Domain.Areas.Repositories;
 using Mmu.CleanDdd.Shared.Domain.Areas.Services.UnitOfWorks;
 

@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\DataAccess\Mmu.CleanDdd.DataAccess.csproj" />
     <ProjectReference Include="..\..\Modules\Shared\Application.Shell\Mmu.CleanDdd.Shared.Application.Shell.csproj" />
     <ProjectReference Include="..\..\Modules\Shared\Domain.Shell\Mmu.CleanDdd.Shared.Domain.Shell.csproj" />
   </ItemGroup>

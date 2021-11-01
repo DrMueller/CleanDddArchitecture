@@ -8,10 +8,10 @@ namespace Mmu.CleanDdd.CrossCutting.Areas.Settings.Config.Services
     {
         public static IConfiguration Create(Assembly assembly)
         {
-            var runDir = Path.GetDirectoryName(assembly.Location);
+            const string SettingsDir = @"C:\Users\mlm\Dropbox\Apps\CleanDddArchitecture";
 
             var builder = new ConfigurationBuilder()
-                .SetBasePath(runDir)
+                .SetBasePath(SettingsDir)
                 .AddJsonFile("appsettings.json", false, true)
                 .AddEnvironmentVariables();
 

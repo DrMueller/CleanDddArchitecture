@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Mmu.CleanDdd.Shared.Domain.Areas.DomainEvents;
 
 namespace Mmu.CleanDdd.Shared.Domain.Areas.Models
 {
@@ -7,6 +9,22 @@ namespace Mmu.CleanDdd.Shared.Domain.Areas.Models
         public DateTime CreatedDate { get; set; }
         public long Id { get; set; }
         public DateTime UpdatedDate { get; set; }
+
+        private List<IDomainEvent> _domainEvents;
+
+        public IReadOnlyCollection<IDomainEvent> DomainEvents => _domainEvents?.AsReadOnly();
+
+        public void ClearDomainEvents()
+        {
+            _domainEvents?.Clear();
+        }
+
+        protected void AddDomainEvent(IDomainEvent domainEvent)
+        {
+            _domainEvents ??= new List<IDomainEvent>();
+
+            this._domainEvents.Add(domainEvent);
+        }
 
         public override bool Equals(object obj)
         {
