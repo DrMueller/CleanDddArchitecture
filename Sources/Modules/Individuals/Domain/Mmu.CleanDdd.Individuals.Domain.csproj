@@ -9,8 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Common\CrossCutting\Mmu.CleanDdd.CrossCutting.csproj" />
-    <ProjectReference Include="..\..\Shared\Domain\Mmu.CleanDdd.Shared.Domain.csproj" />
+    <ProjectReference Include="..\..\..\SharedKernel\Domain\Mmu.CleanDdd.SharedKernel.Domain.csproj" />
   </ItemGroup>
 
 </Project>

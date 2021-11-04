@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Mmu.CleanDdd.Shared.Domain.csproj" />
+    <ProjectReference Include="..\Domain\Mmu.CleanDdd.SharedKernel.Domain.csproj" />
   </ItemGroup>
 
 </Project>

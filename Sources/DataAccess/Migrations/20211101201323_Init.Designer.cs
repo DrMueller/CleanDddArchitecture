@@ -10,7 +10,7 @@ using Mmu.CleanDdd.DataAccess.Areas.DbContexts.Contexts.Implementation;
 namespace Mmu.CleanDdd.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20211028152804_Init")]
+    [Migration("20211101201323_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -88,24 +88,21 @@ namespace Mmu.CleanDdd.DataAccess.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("_description")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)")
-                        .HasColumnName("Description");
+                        .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("_meetingType")
-                        .HasColumnType("int")
-                        .HasColumnName("MeetingType");
+                    b.Property<int>("MeetingType")
+                        .HasColumnType("int");
 
-                    b.Property<string>("_name")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)")
-                        .HasColumnName("Name");
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -116,19 +113,24 @@ namespace Mmu.CleanDdd.DataAccess.Migrations
                 {
                     b.OwnsOne("Mmu.CleanDdd.Meetings.Domain.Areas.Models.Agenda", "Agenda", b1 =>
                         {
-                            b1.Property<long>("MeetingId")
-                                .HasColumnType("bigint");
+                            b1.Property<long>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("bigint")
+                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("datetime2");
 
-                            b1.Property<long>("Id")
+                            b1.Property<long>("MeetingId")
                                 .HasColumnType("bigint");
 
                             b1.Property<DateTime>("UpdatedDate")
                                 .HasColumnType("datetime2");
 
-                            b1.HasKey("MeetingId");
+                            b1.HasKey("Id");
+
+                            b1.HasIndex("MeetingId")
+                                .IsUnique();
 
                             b1.ToTable("Agenda", "Meetings");
 
@@ -142,31 +144,26 @@ namespace Mmu.CleanDdd.DataAccess.Migrations
                                         .HasColumnType("bigint")
                                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                                    b2.Property<long>("AgendaMeetingId")
+                                    b2.Property<long>("AgendaId")
                                         .HasColumnType("bigint");
 
                                     b2.Property<DateTime>("CreatedDate")
                                         .HasColumnType("datetime2");
 
+                                    b2.Property<int>("Index")
+                                        .HasColumnType("int");
+
                                     b2.Property<DateTime>("UpdatedDate")
                                         .HasColumnType("datetime2");
 
-                                    b2.Property<long>("_agendaId")
-                                        .HasColumnType("bigint")
-                                        .HasColumnName("AgendaId");
-
-                                    b2.Property<int>("_index")
-                                        .HasColumnType("int")
-                                        .HasColumnName("Index");
-
                                     b2.HasKey("Id");
 
-                                    b2.HasIndex("AgendaMeetingId");
+                                    b2.HasIndex("AgendaId");
 
                                     b2.ToTable("AgendaPoint", "Meetings");
 
                                     b2.WithOwner()
-                                        .HasForeignKey("AgendaMeetingId");
+                                        .HasForeignKey("AgendaId");
 
                                     b2.OwnsOne("Mmu.CleanDdd.Meetings.Domain.Areas.Models.AgendaPointDescription", "Description", b3 =>
                                         {
@@ -204,26 +201,24 @@ namespace Mmu.CleanDdd.DataAccess.Migrations
                             b1.Property<DateTime>("CreatedDate")
                                 .HasColumnType("datetime2");
 
+                            b1.Property<long>("MeetingId")
+                                .HasColumnType("bigint");
+
+                            b1.Property<string>("Name")
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)");
+
                             b1.Property<DateTime>("UpdatedDate")
                                 .HasColumnType("datetime2");
 
-                            b1.Property<long>("_meetingId")
-                                .HasColumnType("bigint")
-                                .HasColumnName("MeetingId");
-
-                            b1.Property<string>("_name")
-                                .HasMaxLength(100)
-                                .HasColumnType("nvarchar(100)")
-                                .HasColumnName("Name");
-
                             b1.HasKey("Id");
 
-                            b1.HasIndex("_meetingId");
+                            b1.HasIndex("MeetingId");
 
                             b1.ToTable("Participant", "Meetings");
 
                             b1.WithOwner()
-                                .HasForeignKey("_meetingId");
+                                .HasForeignKey("MeetingId");
                         });
 
                     b.Navigation("Agenda");

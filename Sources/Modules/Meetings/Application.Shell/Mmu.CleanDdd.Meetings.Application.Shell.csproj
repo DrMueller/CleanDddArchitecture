@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Application.Shell\Mmu.CleanDdd.Shared.Application.Shell.csproj" />
+    <ProjectReference Include="..\..\..\SharedKernel\Application.Shell\Mmu.CleanDdd.SharedKernel.Application.Shell.csproj" />
     <ProjectReference Include="..\Application\Mmu.CleanDdd.Meetings.Application.csproj" />
   </ItemGroup>
 

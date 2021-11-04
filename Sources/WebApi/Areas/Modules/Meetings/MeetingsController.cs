@@ -64,7 +64,7 @@ namespace Mmu.CleanDdd.WebApi.Areas.Modules.Meetings
         }
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyCollection<MeetingOverviewResponseDto>>> GetOverviewAsync()
+        public async Task<ActionResult<IReadOnlyCollection<MeetingOverviewDto>>> GetOverviewAsync()
         {
             var dtos = await _meetingsModule
                 .GetInteractor<ILoadMeetingsOverviewInteractor>()

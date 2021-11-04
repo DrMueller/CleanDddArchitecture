@@ -15,8 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CrossCutting\Mmu.CleanDdd.CrossCutting.csproj" />
     <ProjectReference Include="..\Modules\Individuals\Domain.Shell\Mmu.CleanDdd.Individuals.Domain.Shell.csproj" />
     <ProjectReference Include="..\Modules\Meetings\Domain.Shell\Mmu.CleanDdd.Meetings.Domain.Shell.csproj" />
+    <ProjectReference Include="..\SharedKernel\Domain.Shell\Mmu.CleanDdd.SharedKernel.Domain.Shell.csproj" />
   </ItemGroup>
 
 </Project>

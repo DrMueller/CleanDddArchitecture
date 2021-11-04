@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Lamar" Version="6.0.0" />
-    <PackageReference Include="MediatR" Version="9.0.0" />
+    <ProjectReference Include="..\Application\Mmu.CleanDdd.SharedKernel.Application.csproj" />
   </ItemGroup>
 
 </Project>

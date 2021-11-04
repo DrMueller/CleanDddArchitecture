@@ -15,7 +15,7 @@ namespace Mmu.CleanDdd.Meetings.Application.Areas.UseCases.Meetings.LoadMeetings
             _queryService = queryService;
         }
 
-        public async Task<IReadOnlyCollection<MeetingOverviewResponseDto>> ExecuteAsync()
+        public async Task<IReadOnlyCollection<MeetingOverviewDto>> ExecuteAsync()
         {
             var spec = new LoadMeetingsOverviewSpec();
             var dtos = await _queryService.QueryAsync(spec);

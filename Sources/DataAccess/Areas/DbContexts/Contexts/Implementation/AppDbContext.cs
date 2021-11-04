@@ -7,7 +7,7 @@ namespace Mmu.CleanDdd.DataAccess.Areas.DbContexts.Contexts.Implementation
 {
     public class AppDbContext : DbContext, IAppDbContext
     {
-        private static readonly LoggerFactory MyLoggerFactory =
+        private static readonly LoggerFactory _myLoggerFactory =
             new(
                 new[]
                 {
@@ -21,7 +21,7 @@ namespace Mmu.CleanDdd.DataAccess.Areas.DbContexts.Contexts.Implementation
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseLoggerFactory(MyLoggerFactory);
+            optionsBuilder.UseLoggerFactory(_myLoggerFactory);
 
             if (optionsBuilder.IsConfigured)
             {

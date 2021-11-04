@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
@@ -11,7 +8,7 @@ using Mmu.CleanDdd.Shared.Application.Areas.Emails.Models;
 using Mmu.CleanDdd.Shared.Application.Areas.Emails.Services;
 using Mmu.CleanDdd.Shared.IntegrationEvents.Areas.Services;
 
-namespace Mmu.CleanDdd.Meetings.Application.Areas.UseCases.Participants.AddParticipant.DomainEventHandlers
+namespace Mmu.CleanDdd.Meetings.Application.Areas.DomainEventHandlers
 {
     public class ParticipantAddedHandler : INotificationHandler<ParticipantAddedDomainEvent>
     {

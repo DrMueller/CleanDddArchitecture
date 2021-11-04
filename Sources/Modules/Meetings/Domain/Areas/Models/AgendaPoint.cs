@@ -4,11 +4,20 @@ namespace Mmu.CleanDdd.Meetings.Domain.Areas.Models
 {
     public class AgendaPoint : Entity
     {
-        private long _agendaId;
-        private int _index;
+        public long AgendaId { get; set; }
 
-        public AgendaPointDescription Description { get; set; }
+        public AgendaPoint(int index)
+        {
+            Index = index;
+        }
 
-        public int Index => _index;
+        public void AddDescription(string desc)
+        {
+            Description = new AgendaPointDescription(desc);
+        }
+
+        public AgendaPointDescription Description { get; private set; }
+
+        public int Index { get; }
     }
 }

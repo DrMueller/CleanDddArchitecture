@@ -71,14 +71,15 @@ namespace Mmu.CleanDdd.DataAccess.Migrations
                 schema: "Meetings",
                 columns: table => new
                 {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     MeetingId = table.Column<long>(type: "bigint", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Id = table.Column<long>(type: "bigint", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Agenda", x => x.MeetingId);
+                    table.PrimaryKey("PK_Agenda", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Agenda_Meeting_MeetingId",
                         column: x => x.MeetingId,
@@ -95,8 +96,8 @@ namespace Mmu.CleanDdd.DataAccess.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    MeetingId = table.Column<long>(type: "bigint", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    MeetingId = table.Column<long>(type: "bigint", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -119,9 +120,8 @@ namespace Mmu.CleanDdd.DataAccess.Migrations
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Description_Text = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
-                    AgendaMeetingId = table.Column<long>(type: "bigint", nullable: false),
                     AgendaId = table.Column<long>(type: "bigint", nullable: false),
+                    Description_Text = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     Index = table.Column<int>(type: "int", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -130,19 +130,26 @@ namespace Mmu.CleanDdd.DataAccess.Migrations
                 {
                     table.PrimaryKey("PK_AgendaPoint", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_AgendaPoint_Agenda_AgendaMeetingId",
-                        column: x => x.AgendaMeetingId,
+                        name: "FK_AgendaPoint_Agenda_AgendaId",
+                        column: x => x.AgendaId,
                         principalSchema: "Meetings",
                         principalTable: "Agenda",
-                        principalColumn: "MeetingId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_AgendaPoint_AgendaMeetingId",
+                name: "IX_Agenda_MeetingId",
+                schema: "Meetings",
+                table: "Agenda",
+                column: "MeetingId",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AgendaPoint_AgendaId",
                 schema: "Meetings",
                 table: "AgendaPoint",
-                column: "AgendaMeetingId");
+                column: "AgendaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Participant_MeetingId",

@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Domain.Shell\Mmu.CleanDdd.Shared.Domain.Shell.csproj" />
+    <ProjectReference Include="..\..\..\SharedKernel\Domain.Shell\Mmu.CleanDdd.SharedKernel.Domain.Shell.csproj" />
     <ProjectReference Include="..\Domain\Mmu.CleanDdd.Individuals.Domain.csproj" />
   </ItemGroup>
 

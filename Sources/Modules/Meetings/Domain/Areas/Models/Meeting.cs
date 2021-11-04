@@ -11,28 +11,21 @@ namespace Mmu.CleanDdd.Meetings.Domain.Areas.Models
     {
         private List<Participant> _participants;
 
-        public Meeting(string name, string description, MeetingType type)
+        public Meeting(string name, string description, MeetingType meetingType)
         {
             Guard.StringNotNullOrEmpty(() => name);
             Guard.StringNotNullOrEmpty(() => description);
 
-            _name = name;
-            _description = description;
-            _meetingType = type;
-        }
-
-        public Meeting()
-        {
+            Name = name;
+            Description = description;
+            MeetingType = meetingType;
         }
 
         public Agenda Agenda { get; private set; }
-        public string Description => _description;
-        public MeetingType MeetingType => _meetingType;
-        public string Name => _name;
-        private string _description;
+        public string Description { get; }
+        public MeetingType MeetingType { get;}
 
-        private string _name;
-        private MeetingType _meetingType;
+        public string Name { get; }
 
         public IReadOnlyCollection<Participant> Participants => _participants;
 

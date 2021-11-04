@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Mmu.CleanDdd.Shared.Domain.Areas.Models;
@@ -12,11 +13,14 @@ namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.Repositories.Base
     public abstract class RepositoryBase<TAg> : IRepositoryBase, IRepository<TAg>
         where TAg : AggregateRoot
     {
-        protected DbSet<TAg> DbSet { get; private set; }
+        private DbSet<TAg> DbSet { get; set; }
+        private IQueryable<TAg> Query => InitializeIncludes(DbSet);
+
+        protected abstract IQueryable<TAg> InitializeIncludes(IQueryable<TAg> query);
 
         public async Task DeleteAsync(long id)
         {
-            var loadedEntity = await DbSet.SingleOrDefaultAsync(f => f.Id == id);
+            var loadedEntity = await Query.SingleOrDefaultAsync(f => f.Id == id);
 
             if (loadedEntity == null)
             {
@@ -26,21 +30,16 @@ namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.Repositories.Base
             DbSet.Remove(loadedEntity);
         }
 
-        public Task DeleteAsync(ISpecification<TAg> spec)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<IReadOnlyCollection<TAg>> LoadAllAsync(ISpecification<TAg> spec)
         {
-            var qry = spec.Apply(DbSet);
+            var qry = spec.Apply(Query);
 
             return await qry.ToListAsync();
         }
 
         public async Task<TAg> LoadAsync(ISpecification<TAg> spec)
         {
-            var qry = spec.Apply(DbSet);
+            var qry = spec.Apply(Query);
 
             return await qry.SingleOrDefaultAsync();
         }
@@ -67,7 +66,7 @@ namespace Mmu.CleanDdd.Shared.Domain.Shell.Areas.Repositories.Base
 
         void IRepositoryBase.Initialize(IAppDbContext dbContext)
         {
-            DbSet = dbContext.Set<TAg>();
+           DbSet = dbContext.Set<TAg>();
         }
     }
 }

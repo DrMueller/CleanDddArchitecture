@@ -11,19 +11,16 @@ namespace Mmu.CleanDdd.Meetings.Domain.Shell.Areas.TypeConfigurations
         protected override void ConfigureEntity(EntityTypeBuilder<Meeting> builder)
         {
             builder
-                .Property("_name")
-                .HasColumnName("Name")
+                .Property(f => f.Name)
                 .HasMaxLength(100)
                 .IsRequired();
 
             builder
-                .Property("_meetingType")
-                .HasColumnName("MeetingType")
+                .Property(f => f.MeetingType)
                 .IsRequired();
 
             builder
-                .Property("_description")
-                .HasColumnName("Description")
+                .Property(f => f.Description)
                 .HasMaxLength(200)
                 .IsRequired();
 
@@ -37,7 +34,11 @@ namespace Mmu.CleanDdd.Meetings.Domain.Shell.Areas.TypeConfigurations
         {
             return builder =>
             {
-                builder.WithOwner();
+                builder.WithOwner().HasForeignKey(f => f.MeetingId);
+                builder.HasKey(f => f.Id);
+
+                builder.Property(f => f.MeetingId)
+                    .IsRequired();
 
                 builder.OwnsMany(f => f.Points, ConfigureAgendaPoint());
                 builder.ToTable(nameof(Agenda), Schemas.Meetings);
@@ -48,15 +49,13 @@ namespace Mmu.CleanDdd.Meetings.Domain.Shell.Areas.TypeConfigurations
         {
             return builder =>
             {
-                builder.WithOwner();
+                builder.WithOwner().HasForeignKey(f => f.AgendaId);
                 builder.HasKey(f => f.Id);
 
-                builder.Property("_agendaId")
-                    .HasColumnName("AgendaId")
+                builder.Property(f => f.AgendaId)
                     .IsRequired();
 
-                builder.Property("_index")
-                    .HasColumnName("Index")
+                builder.Property(f => f.Index)
                     .IsRequired();
 
                 builder.OwnsOne(f => f.Description, ConfigureAgendaPointDescription());
@@ -82,16 +81,12 @@ namespace Mmu.CleanDdd.Meetings.Domain.Shell.Areas.TypeConfigurations
         {
             return builder =>
             {
-                builder.WithOwner().HasForeignKey("_meetingId");
+                //builder.WithOwner().HasForeignKey(f => f.MeetingId);
+                builder.WithOwner();
                 builder.HasKey(f => f.Id);
 
                 builder
-                    .Property("_meetingId")
-                    .HasColumnName("MeetingId");
-
-                builder
-                    .Property("_name")
-                    .HasColumnName("Name")
+                    .Property(f => f.Name)
                     .HasMaxLength(100);
 
                 builder.ToTable(nameof(Participant), Schemas.Meetings);

@@ -6,6 +6,6 @@ namespace Mmu.CleanDdd.Meetings.Application.Areas.UseCases.Meetings.LoadMeetings
 {
     public interface ILoadMeetingsOverviewInteractor : IMeetingsModuleInteractor
     {
-        Task<IReadOnlyCollection<MeetingOverviewResponseDto>> ExecuteAsync();
+        Task<IReadOnlyCollection<MeetingOverviewDto>> ExecuteAsync();
     }
 }

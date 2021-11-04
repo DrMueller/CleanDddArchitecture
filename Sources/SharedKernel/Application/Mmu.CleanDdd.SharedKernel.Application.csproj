@@ -7,7 +7,8 @@
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2021.3.0-eap4" />
     <PackageReference Include="Lamar" Version="6.0.0" />
-  </ItemGroup>
+				<PackageReference Include="MediatR" Version="9.0.0" />
+		</ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\CrossCutting\Mmu.CleanDdd.CrossCutting.csproj" />

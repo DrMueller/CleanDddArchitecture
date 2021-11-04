@@ -2,7 +2,7 @@
 
 namespace Mmu.CleanDdd.Meetings.Application.Areas.UseCases.Meetings.LoadMeetingsOverview.Dtos
 {
-    public class MeetingOverviewResponseDto
+    public class MeetingOverviewDto
     {
         public AgendaDto Agenda { get; set; }
         public long MeetingId { get; set; }
