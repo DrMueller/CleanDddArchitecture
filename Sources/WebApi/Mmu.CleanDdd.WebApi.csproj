@@ -12,7 +12,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Common\Dependencies\Mmu.CleanDdd.Dependencies.csproj" />
+		<ProjectReference Include="..\Dependencies\Mmu.CleanDdd.Dependencies.csproj" />
 		<ProjectReference Include="..\Modules\Individuals\Application\Mmu.CleanDdd.Individuals.Application.csproj" />
 		<ProjectReference Include="..\Modules\Meetings\Application\Mmu.CleanDdd.Meetings.Application.csproj" />
 	</ItemGroup>
