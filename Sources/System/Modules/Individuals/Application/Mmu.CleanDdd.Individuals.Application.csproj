@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\CrossCutting\Mmu.CleanDdd.CrossCutting.csproj" />
+		<ProjectReference Include="..\..\..\SharedKernel\Domain\Mmu.CleanDdd.SharedKernel.Domain.csproj" />
+		<ProjectReference Include="..\..\Meetings\IntegrationEvents\Mmu.CleanDdd.Meetings.IntegrationEvents.csproj" />
+		<ProjectReference Include="..\Domain\Mmu.CleanDdd.Individuals.Domain.csproj" />
+	</ItemGroup>
+
+</Project>
