@@ -8,6 +8,16 @@ namespace Mmu.CleanDdd.SharedKernel.Domain.Shell.Areas.DomainEvents.Services.Ser
 {
     public class DomainEventAccessor : IDomainEventAccessor
     {
+        public void ClearAllDomainEvents(IAppDbContext appContext)
+        {
+            var domainEntities = appContext.ChangeTracker
+                .Entries<Entity>()
+                .Where(x => x.Entity.DomainEvents != null && x.Entity.DomainEvents.Any()).ToList();
+
+            domainEntities
+                .ForEach(entity => entity.Entity.ClearDomainEvents());
+        }
+
         public IReadOnlyCollection<IDomainEvent> GetDomainEvents(IAppDbContext appContext)
         {
             var domainEntities = appContext.ChangeTracker
@@ -17,16 +27,6 @@ namespace Mmu.CleanDdd.SharedKernel.Domain.Shell.Areas.DomainEvents.Services.Ser
             return domainEntities
                 .SelectMany(x => x.Entity.DomainEvents)
                 .ToList();
-        }
-
-        public void ClearAllDomainEvents(IAppDbContext appContext)
-        {
-            var domainEntities = appContext.ChangeTracker
-                .Entries<Entity>()
-                .Where(x => x.Entity.DomainEvents != null && x.Entity.DomainEvents.Any()).ToList();
-
-            domainEntities
-                .ForEach(entity => entity.Entity.ClearDomainEvents());
         }
     }
 }

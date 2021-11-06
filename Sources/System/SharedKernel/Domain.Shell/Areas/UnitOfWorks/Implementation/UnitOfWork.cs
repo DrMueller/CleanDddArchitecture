@@ -13,8 +13,8 @@ namespace Mmu.CleanDdd.SharedKernel.Domain.Shell.Areas.UnitOfWorks.Implementatio
 {
     public sealed class UnitOfWork : IUnitOfWork
     {
-        private readonly IRepositoryCache _repoCache;
         private readonly IDomainEventDispatcher _domainEventDispatcher;
+        private readonly IRepositoryCache _repoCache;
         private IAppDbContext _dbContext;
 
         public UnitOfWork(

@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics.CodeAnalysis;
 using System.Threading.Tasks;
 using Mmu.CleanDdd.SharedKernel.Domain.Areas.Models;
-using Mmu.CleanDdd.SharedKernel.Domain.Areas.Specifications;
 
 namespace Mmu.CleanDdd.SharedKernel.Domain.Areas.Repositories
 {

@@ -5,11 +5,6 @@ namespace Mmu.CleanDdd.SharedKernel.Application.Areas.Emails.Models
 {
     public class Email
     {
-        public EmailBody Body { get; }
-        public string FromAddress { get; }
-        public string Subject { get; }
-        public IReadOnlyCollection<string> ToAddresses { get; }
-
         public Email(string fromAddress, IReadOnlyCollection<string> toAddresses, string subject, EmailBody body)
         {
             Guard.StringNotNullOrEmpty(() => fromAddress);
@@ -23,5 +18,10 @@ namespace Mmu.CleanDdd.SharedKernel.Application.Areas.Emails.Models
             Subject = subject;
             Body = body;
         }
+
+        public EmailBody Body { get; }
+        public string FromAddress { get; }
+        public string Subject { get; }
+        public IReadOnlyCollection<string> ToAddresses { get; }
     }
 }

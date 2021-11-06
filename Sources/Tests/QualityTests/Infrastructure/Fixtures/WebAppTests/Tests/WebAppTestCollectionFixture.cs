@@ -1,5 +1,4 @@
-﻿using Mmu.CleanDdd.QualityTests.Infrastructure.Fixtures.AssemblyTests;
-using Xunit;
+﻿using Xunit;
 
 namespace Mmu.CleanDdd.QualityTests.Infrastructure.Fixtures.WebAppTests.Tests
 {

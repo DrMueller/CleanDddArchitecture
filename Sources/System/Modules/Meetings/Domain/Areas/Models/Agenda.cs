@@ -6,13 +6,14 @@ namespace Mmu.CleanDdd.Meetings.Domain.Areas.Models
 {
     public class Agenda : Entity
     {
-        public long MeetingId { get; set; }
-
         private readonly IList<AgendaPoint> _points;
+
         public Agenda()
         {
             _points = new List<AgendaPoint>();
         }
+
+        public long MeetingId { get; set; }
 
         public IReadOnlyCollection<AgendaPoint> Points => _points.ToList();
 

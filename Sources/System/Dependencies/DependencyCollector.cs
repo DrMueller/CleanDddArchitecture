@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using Mmu.CleanDdd.DataAccess.Areas.DbContexts.Contexts.Implementation;
+using Mmu.CleanDdd.Individuals.Application.Shell.Infrastructure.DependencyInjection;
 
 namespace Mmu.CleanDdd.Dependencies
 {
@@ -6,15 +7,15 @@ namespace Mmu.CleanDdd.Dependencies
     {
         public static void Initialize()
         {
-            var _ = typeof(Mmu.CleanDdd.DataAccess.Areas.DbContexts.Contexts.Implementation.AppDbContext);
-            
-            _ = typeof(Mmu.CleanDdd.Individuals.Application.Shell.Infrastructure.DependencyInjection.RegistryCollection);
+            var _ = typeof(AppDbContext);
 
-            _ = typeof(Mmu.CleanDdd.Individuals.Domain.Shell.Infrastructure.DependencyInjection.RegistryCollection);
+            _ = typeof(RegistryCollection);
 
-            _ = typeof(Mmu.CleanDdd.Meetings.Application.Shell.Infrastructure.DependencyInjection.RegistryCollection);
+            _ = typeof(Individuals.Domain.Shell.Infrastructure.DependencyInjection.RegistryCollection);
 
-            _ = typeof(Mmu.CleanDdd.Meetings.Domain.Shell.Infrastructure.DependencyInjection.RegistryCollection);
+            _ = typeof(Meetings.Application.Shell.Infrastructure.DependencyInjection.RegistryCollection);
+
+            _ = typeof(Meetings.Domain.Shell.Infrastructure.DependencyInjection.RegistryCollection);
         }
     }
 }

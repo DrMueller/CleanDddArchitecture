@@ -1,7 +1,9 @@
 ﻿using System;
+using JetBrains.Annotations;
 
 namespace Mmu.CleanDdd.Individuals.Application.Areas.UseCases.LoadAllIndividuals.Dtos
 {
+    [PublicAPI]
     public class IndividualResultDto
     {
         public const string GenderFemale = "Female";

@@ -1,6 +1,5 @@
 ﻿using FluentAssertions;
 using Lamar;
-using Mmu.CleanDdd.QualityTests.Infrastructure.Fixtures.AssemblyTests;
 using Mmu.CleanDdd.QualityTests.Infrastructure.Fixtures.WebAppTests.Tests;
 using Xunit;
 

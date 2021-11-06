@@ -7,21 +7,10 @@ namespace Mmu.CleanDdd.QualityTests.Areas.AssemblyDependencies
 {
     internal static class AssemblyReferenceAsserter
     {
-        internal static void AssertAssemblyContainsReferences(
-            Assembly source, params string[] targetNamespaces)
-        {
-            var refAssemblyNames = source.GetReferencedAssemblies().Select(f => f.Name).ToList();
-
-            foreach(var ns in targetNamespaces)
-            {
-                refAssemblyNames.Should().Contain(ns);
-            }
-        }
-
         internal static void AssertAssemblyContainsExactReferences(
             Assembly source,
             IReadOnlyCollection<Assembly> allAssemblies,
-                params string[] targetNamespaces)
+            params string[] targetNamespaces)
         {
             var refAssemblyNames = source
                 .GetReferencedAssemblies()
@@ -39,9 +28,20 @@ namespace Mmu.CleanDdd.QualityTests.Areas.AssemblyDependencies
                 .Select(f => f.Name)
                 .ToList();
 
-            foreach(var otherAssemblyName in oherAssemblyNames)
+            foreach (var otherAssemblyName in oherAssemblyNames)
             {
                 refAssemblyNames.Should().NotContain(otherAssemblyName);
+            }
+        }
+
+        internal static void AssertAssemblyContainsReferences(
+            Assembly source, params string[] targetNamespaces)
+        {
+            var refAssemblyNames = source.GetReferencedAssemblies().Select(f => f.Name).ToList();
+
+            foreach (var ns in targetNamespaces)
+            {
+                refAssemblyNames.Should().Contain(ns);
             }
         }
 

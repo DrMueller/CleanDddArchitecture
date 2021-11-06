@@ -6,24 +6,16 @@ namespace Mmu.CleanDdd.SharedKernel.Domain.Areas.Models
 {
     public abstract class Entity : IHasCreatedDate
     {
-        public DateTime CreatedDate { get; set; }
-        public long Id { get; set; }
-        public DateTime UpdatedDate { get; set; }
-
         private List<IDomainEvent> _domainEvents;
+        public DateTime CreatedDate { get; set; }
 
         public IReadOnlyCollection<IDomainEvent> DomainEvents => _domainEvents?.AsReadOnly();
+        public long Id { get; set; }
+        public DateTime UpdatedDate { get; set; }
 
         public void ClearDomainEvents()
         {
             _domainEvents?.Clear();
-        }
-
-        protected void AddDomainEvent(IDomainEvent domainEvent)
-        {
-            _domainEvents ??= new List<IDomainEvent>();
-
-            this._domainEvents.Add(domainEvent);
         }
 
         public override bool Equals(object obj)
@@ -51,6 +43,13 @@ namespace Mmu.CleanDdd.SharedKernel.Domain.Areas.Models
         public override int GetHashCode()
         {
             return (GetType() + Id.ToString()).GetHashCode();
+        }
+
+        protected void AddDomainEvent(IDomainEvent domainEvent)
+        {
+            _domainEvents ??= new List<IDomainEvent>();
+
+            _domainEvents.Add(domainEvent);
         }
 
         public static bool operator ==(Entity a, Entity b)

@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using Mmu.CleanDdd.QualityTests.Infrastructure;
-using Mmu.CleanDdd.QualityTests.Infrastructure.Asserters;
 using Mmu.CleanDdd.QualityTests.Infrastructure.Fixtures.AssemblyTests;
 using Mmu.CleanDdd.WebApi;
 using Xunit;
@@ -10,6 +9,10 @@ namespace Mmu.CleanDdd.QualityTests.Areas.AssemblyDependencies
     public class WebApiDependenciesTests : AssemblyTestBase
     {
         private static readonly Assembly _sutAssembly = typeof(Startup).Assembly;
+
+        public WebApiDependenciesTests(AssemblyTestFixture fixture) : base(fixture)
+        {
+        }
 
         [Fact]
         public void WebApi_DoesHaveDependencies_ToModuleApplications()
@@ -49,10 +52,6 @@ namespace Mmu.CleanDdd.QualityTests.Areas.AssemblyDependencies
             AssemblyReferenceAsserter.AssertAssemblyDoesNotContainsReferences(
                 _sutAssembly,
                 Constants.Namespaces.SharedKernel.All);
-        }
-
-        public WebApiDependenciesTests(AssemblyTestFixture fixture) : base(fixture)
-        {
         }
     }
 }

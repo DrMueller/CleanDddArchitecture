@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FluentAssertions;
 using Mmu.CleanDdd.QualityTests.Infrastructure.Asserters;
 using Mmu.CleanDdd.QualityTests.Infrastructure.Fixtures.AssemblyTests;
@@ -14,25 +12,7 @@ namespace Mmu.CleanDdd.QualityTests.Areas.Layers.Domain
 {
     public class DomainEventTests : AssemblyTestBase
     {
-        [Fact]
-        public void DomainEvents_EndWithDomainEvent()
-        {
-            var typeNames = _domainEventTypes.Select(f => f.Name);
-
-            foreach (var tn in typeNames)
-            {
-                tn.Should().EndWith("DomainEvent");
-            }
-        }
-
-        [Fact]
-        public void DomainEvents_AreImmutable()
-        {
-            TypeImmutableAsserter.AssertTypesAreImmutable(_domainEventTypes);
-        }
-
         private readonly IReadOnlyCollection<Type> _domainEventTypes;
-
 
         public DomainEventTests(AssemblyTestFixture fixture) : base(fixture)
         {
@@ -42,6 +22,23 @@ namespace Mmu.CleanDdd.QualityTests.Areas.Layers.Domain
                 .And().AreNotAbstract()
                 .GetTypes()
                 .ToList();
+        }
+
+        [Fact]
+        public void DomainEvents_AreImmutable()
+        {
+            TypeImmutableAsserter.AssertTypesAreImmutable(_domainEventTypes);
+        }
+
+        [Fact]
+        public void DomainEvents_EndWithDomainEvent()
+        {
+            var typeNames = _domainEventTypes.Select(f => f.Name);
+
+            foreach (var tn in typeNames)
+            {
+                tn.Should().EndWith("DomainEvent");
+            }
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Mmu.CleanDdd.QualityTests.Infrastructure.Fixtures.WebAppTests.WebApp
 {
     public class QualityTestAppFactory : WebApplicationFactory<QualityTestStartup>
     {
-        public string ContentRootPath { get; private set; }
+        private string ContentRootPath { get; set; }
 
         protected override IHost CreateHost(IHostBuilder builder)
         {

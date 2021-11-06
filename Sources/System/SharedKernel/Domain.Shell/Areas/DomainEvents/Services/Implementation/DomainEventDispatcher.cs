@@ -22,7 +22,7 @@ namespace Mmu.CleanDdd.SharedKernel.Domain.Shell.Areas.DomainEvents.Services.Imp
         {
             var events = _domainEventAccessor.GetDomainEvents(dbContext);
 
-            foreach(var ev in events)
+            foreach (var ev in events)
             {
                 await _mediator.Publish(ev);
             }

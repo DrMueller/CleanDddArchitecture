@@ -23,7 +23,7 @@ namespace Mmu.CleanDdd.Meetings.Domain.Areas.Models
 
         public Agenda Agenda { get; private set; }
         public string Description { get; }
-        public MeetingType MeetingType { get;}
+        public MeetingType MeetingType { get; }
 
         public string Name { get; }
 

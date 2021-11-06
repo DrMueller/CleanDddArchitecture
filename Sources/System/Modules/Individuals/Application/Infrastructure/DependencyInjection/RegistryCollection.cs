@@ -1,6 +1,5 @@
 ﻿using Lamar;
 using MediatR;
-using Mmu.CleanDdd.Individuals.Application.Areas.Module;
 
 namespace Mmu.CleanDdd.Individuals.Application.Infrastructure.DependencyInjection
 {

@@ -35,7 +35,7 @@ namespace Mmu.CleanDdd.SharedKernel.Application.Shell.Areas.Emails.Services.Impl
         {
             var mailMessage = new MailMessage { From = new MailAddress(email.FromAddress) };
 
-            foreach(var to in email.ToAddresses)
+            foreach (var to in email.ToAddresses)
             {
                 mailMessage.To.Add(to);
             }
