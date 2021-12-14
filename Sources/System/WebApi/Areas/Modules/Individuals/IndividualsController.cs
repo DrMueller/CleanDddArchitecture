@@ -2,14 +2,11 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Mmu.CleanDdd.Individuals.Application.Areas.Module;
-using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.CreateIndividual.Dtos;
-using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.CreateIndividual.Interactors;
-using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.DeleteIndividual.Interactors;
-using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.LoadAllIndividuals.Dtos;
-using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.LoadAllIndividuals.Interactors;
-using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.UpdateIndividual.Dtos;
-using Mmu.CleanDdd.Individuals.Application.Areas.UseCases.UpdateIndividual.Interactors;
+using Mmu.CleanDdd.Individuals.Application.Areas.CreateIndividual;
+using Mmu.CleanDdd.Individuals.Application.Areas.DeleteIndividual;
+using Mmu.CleanDdd.Individuals.Application.Areas.LoadAllIndividuals;
+using Mmu.CleanDdd.Individuals.Application.Areas.UpdateIndividual;
+using Mmu.CleanDdd.SharedKernel.Application.Areas.Mediation.Services;
 
 namespace Mmu.CleanDdd.WebApi.Areas.Modules.Individuals
 {
@@ -18,20 +15,18 @@ namespace Mmu.CleanDdd.WebApi.Areas.Modules.Individuals
     [Route("api/[controller]")]
     public class IndividualsController : ControllerBase
     {
-        private readonly IIndividualsModule _individualsModule;
+        private readonly IMediationService _mediator;
 
         public IndividualsController(
-            IIndividualsModule individualsModule)
+            IMediationService mediator)
         {
-            _individualsModule = individualsModule;
+            _mediator = mediator;
         }
 
         [HttpPost]
         public async Task<ActionResult<CreateIndividualResultDto>> CreateIndividualAsync(CreateIndividualRequestDto dto)
         {
-            var result = await _individualsModule
-                .GetInteractor<ICreateIndividualInteractor>()
-                .ExecuteAsync(dto);
+            var result = await _mediator.SendAsync(new CreateIndividualCommand(dto));
 
             return Ok(result);
         }
@@ -39,9 +34,7 @@ namespace Mmu.CleanDdd.WebApi.Areas.Modules.Individuals
         [HttpDelete("{individualId:long}")]
         public async Task<IActionResult> DeleteIndividualAsync([FromRoute] long individualId)
         {
-            await _individualsModule
-                .GetInteractor<IDeleteIndividualInteractor>()
-                .ExecuteAsync(individualId);
+            await _mediator.SendAsync(new DeleteIndividualCommand(individualId));
 
             return Ok();
         }
@@ -49,9 +42,7 @@ namespace Mmu.CleanDdd.WebApi.Areas.Modules.Individuals
         [HttpGet]
         public async Task<ActionResult<IReadOnlyCollection<IndividualResultDto>>> LoadAllAsync()
         {
-            var allIndividuals = await _individualsModule
-                .GetInteractor<ILoadAllIndividualsInteractor>()
-                .ExecuteAsync();
+            var allIndividuals = await _mediator.SendAsync(new LoadAllIndividualsQuery());
 
             return Ok(allIndividuals);
         }
@@ -59,9 +50,7 @@ namespace Mmu.CleanDdd.WebApi.Areas.Modules.Individuals
         [HttpPut("{individualId:long}")]
         public async Task<IActionResult> UpdateIndividualAsync([FromRoute] long individualId, [FromBody] IndividualToUpdateDto dto)
         {
-            await _individualsModule
-                .GetInteractor<IUpdateIndividualInteractor>()
-                .ExecuteAsync(individualId, dto);
+            await _mediator.SendAsync(new UpdateIndividualCommand(dto));
 
             return Ok();
         }

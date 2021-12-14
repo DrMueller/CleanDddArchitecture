@@ -1,17 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="JetBrains.Annotations" Version="2021.3.0-eap4" />
-    <PackageReference Include="Lamar" Version="6.0.0" />
-		</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="JetBrains.Annotations" Version="2021.3.0-eap4" />
+		<PackageReference Include="Lamar" Version="6.0.0" />
+		<PackageReference Include="MediatR" Version="9.0.0" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\CrossCutting\Mmu.CleanDdd.CrossCutting.csproj" />
-    <ProjectReference Include="..\IntegrationEvents\Mmu.CleanDdd.SharedKernel.IntegrationEvents.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\CrossCutting\Mmu.CleanDdd.CrossCutting.csproj" />
+		<ProjectReference Include="..\IntegrationEvents\Mmu.CleanDdd.SharedKernel.IntegrationEvents.csproj" />
+	</ItemGroup>
 
 </Project>

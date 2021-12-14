@@ -10,6 +10,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\CrossCutting\Mmu.CleanDdd.CrossCutting.csproj" />
+		<ProjectReference Include="..\..\..\SharedKernel\Application\Mmu.CleanDdd.SharedKernel.Application.csproj" />
 		<ProjectReference Include="..\..\..\SharedKernel\Domain\Mmu.CleanDdd.SharedKernel.Domain.csproj" />
 		<ProjectReference Include="..\..\Meetings\IntegrationEvents\Mmu.CleanDdd.Meetings.IntegrationEvents.csproj" />
 		<ProjectReference Include="..\Domain\Mmu.CleanDdd.Individuals.Domain.csproj" />

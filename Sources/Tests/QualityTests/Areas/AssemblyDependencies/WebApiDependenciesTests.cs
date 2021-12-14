@@ -39,19 +39,9 @@ namespace Mmu.CleanDdd.QualityTests.Areas.AssemblyDependencies
                 Constants.Namespaces.Modules.Individuals.IntegrationEvents,
                 Constants.Namespaces.Modules.Individuals.ApplicationShell,
                 Constants.Namespaces.Modules.Meetings.Domain,
-                Constants.Namespaces.Modules.Meetings.Domain,
                 Constants.Namespaces.Modules.Meetings.DomainShell,
                 Constants.Namespaces.Modules.Meetings.IntegrationEvents,
-                Constants.Namespaces.Modules.Meetings.ApplicationShell,
-                Constants.Namespaces.Modules.Meetings.Domain);
-        }
-
-        [Fact]
-        public void WebApi_DoesNotHaveDependencies_ToSharedKernel()
-        {
-            AssemblyReferenceAsserter.AssertAssemblyDoesNotContainsReferences(
-                _sutAssembly,
-                Constants.Namespaces.SharedKernel.All);
+                Constants.Namespaces.Modules.Meetings.ApplicationShell);
         }
     }
 }

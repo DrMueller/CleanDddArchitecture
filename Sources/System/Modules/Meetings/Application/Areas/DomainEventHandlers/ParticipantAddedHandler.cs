@@ -6,21 +6,21 @@ using Mmu.CleanDdd.Meetings.Domain.Areas.DomainEvents;
 using Mmu.CleanDdd.Meetings.IntegrationEvents.Areas.IntegrationEvents;
 using Mmu.CleanDdd.SharedKernel.Application.Areas.Emails.Models;
 using Mmu.CleanDdd.SharedKernel.Application.Areas.Emails.Services;
-using Mmu.CleanDdd.SharedKernel.Application.Areas.IntegrationEvents.Services;
+using Mmu.CleanDdd.SharedKernel.Application.Areas.Mediation.Services;
 
 namespace Mmu.CleanDdd.Meetings.Application.Areas.DomainEventHandlers
 {
     public class ParticipantAddedHandler : INotificationHandler<ParticipantAddedDomainEvent>
     {
         private readonly IEmailSender _emailSender;
-        private readonly IIntegrationEventSender _integrationEventSender;
+        private readonly IMediationService _mediator;
 
         public ParticipantAddedHandler(
             IEmailSender emailSender,
-            IIntegrationEventSender integrationEventSender)
+            IMediationService mediator)
         {
             _emailSender = emailSender;
-            _integrationEventSender = integrationEventSender;
+            _mediator = mediator;
         }
 
         public async Task Handle(ParticipantAddedDomainEvent notification, CancellationToken cancellationToken)
@@ -45,7 +45,7 @@ namespace Mmu.CleanDdd.Meetings.Application.Areas.DomainEventHandlers
 
         private async Task SendIntegrationEventAsync(ParticipantAddedDomainEvent notification)
         {
-            await _integrationEventSender.PublishAsync(new ParticipantAddedIntegrationEvent(notification.ParticipantName));
+            await _mediator.PublishAsync(new ParticipantAddedIntegrationEvent(notification.ParticipantName));
         }
     }
 }
