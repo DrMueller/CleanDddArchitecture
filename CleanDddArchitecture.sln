@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31410.357
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{98CEE679-08F2-449C-97A6-59F4A7A16E9E}"
 EndProject
@@ -58,6 +58,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.CleanDdd.SharedKernel.Domain", "Sources\System\SharedKernel\Domain\Mmu.CleanDdd.SharedKernel.Domain.csproj", "{7550A514-523E-473F-A8BE-5BEE0C1B4AB7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.CleanDdd.QualityTests", "Sources\Tests\QualityTests\Mmu.CleanDdd.QualityTests.csproj", "{E16A531B-78EE-4C57-AADE-411B473191B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mmu.CleanDdd.DataAccess.UnitTests", "Sources\Tests\DataAccess.UnitTests\Mmu.CleanDdd.DataAccess.UnitTests.csproj", "{20985F90-71ED-405C-905B-C9D93C2C99A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -145,6 +147,10 @@ Global
 		{E16A531B-78EE-4C57-AADE-411B473191B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E16A531B-78EE-4C57-AADE-411B473191B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E16A531B-78EE-4C57-AADE-411B473191B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20985F90-71ED-405C-905B-C9D93C2C99A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20985F90-71ED-405C-905B-C9D93C2C99A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20985F90-71ED-405C-905B-C9D93C2C99A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20985F90-71ED-405C-905B-C9D93C2C99A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -171,6 +177,7 @@ Global
 		{E6691C9A-8112-47CD-9D4C-A1831F355235} = {03CD41D7-E0A7-475C-B7F5-52249E4884FA}
 		{7550A514-523E-473F-A8BE-5BEE0C1B4AB7} = {D1275F47-A906-4E50-9481-B701D7B6D6CD}
 		{E16A531B-78EE-4C57-AADE-411B473191B5} = {04F9D93A-73CB-4A14-B226-9DBFA089B267}
+		{20985F90-71ED-405C-905B-C9D93C2C99A3} = {04F9D93A-73CB-4A14-B226-9DBFA089B267}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1B91E1E-F2F2-4CF9-B588-6903F1D85A89}

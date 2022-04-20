@@ -81,7 +81,6 @@ namespace Mmu.CleanDdd.Meetings.Domain.Shell.Areas.TypeConfigurations
         {
             return builder =>
             {
-                //builder.WithOwner().HasForeignKey(f => f.MeetingId);
                 builder.WithOwner();
                 builder.HasKey(f => f.Id);
 
