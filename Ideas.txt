@@ -1,4 +1,0 @@
-# Ansätze
-
-- Datenbank sollte trotzdem in sich geschlossen querybar sein
-- EF Core Konfiguration umkehren? Wegen Aggregate Roots und OwnsOne etc.

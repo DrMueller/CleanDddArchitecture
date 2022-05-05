@@ -1,0 +1,66 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8c585aa4-6a5c-46b0-ae62-8ba0061cb775": {
+      "ProjectGuid": "8c585aa4-6a5c-46b0-ae62-8ba0061cb775",
+      "DisplayName": "Mmu.CleanDdd.SharedKernel.Domain.Shell",
+      "ColorIndex": 0
+    },
+    "47ea0aa0-eff7-4073-b704-56e6d7092658": {
+      "ProjectGuid": "47ea0aa0-eff7-4073-b704-56e6d7092658",
+      "DisplayName": "Mmu.CleanDdd.Meetings.Domain.Shell",
+      "ColorIndex": 1
+    },
+    "88c34aa9-d8fb-4005-bb3f-e0942e3fa195": {
+      "ProjectGuid": "88c34aa9-d8fb-4005-bb3f-e0942e3fa195",
+      "DisplayName": "Mmu.CleanDdd.Meetings.Domain",
+      "ColorIndex": 2
+    },
+    "52ea73da-5578-41ae-8118-935e0c0294d7": {
+      "ProjectGuid": "52ea73da-5578-41ae-8118-935e0c0294d7",
+      "DisplayName": "Mmu.CleanDdd.Meetings.IntegrationEvents",
+      "ColorIndex": 3
+    },
+    "72ade429-bb0c-4c23-ada8-1f38ea62c175": {
+      "ProjectGuid": "72ade429-bb0c-4c23-ada8-1f38ea62c175",
+      "DisplayName": "Mmu.CleanDdd.Individuals.Application.Shell",
+      "ColorIndex": 4
+    },
+    "a9527694-e070-4e83-a3b4-8e192a168068": {
+      "ProjectGuid": "a9527694-e070-4e83-a3b4-8e192a168068",
+      "DisplayName": "Mmu.CleanDdd.Individuals.Domain.Shell",
+      "ColorIndex": 5
+    },
+    "9d10f2ba-6dae-4544-a29f-31d4035d493f": {
+      "ProjectGuid": "9d10f2ba-6dae-4544-a29f-31d4035d493f",
+      "DisplayName": "Mmu.CleanDdd.DataAccess",
+      "ColorIndex": 6
+    },
+    "7fb6950e-9a9e-4a19-ab96-f140d8e5b561": {
+      "ProjectGuid": "7fb6950e-9a9e-4a19-ab96-f140d8e5b561",
+      "DisplayName": "Mmu.CleanDdd.DataAccess.UnitTests",
+      "ColorIndex": 7
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "20985f90-71ed-405c-905b-c9d93c2c99a3": {
+      "ProjectGuid": "20985f90-71ed-405c-905b-c9d93c2c99a3",
+      "DisplayName": "Mmu.CleanDdd.DataAccess.UnitTests",
+      "ColorIndex": 8
+    },
+    "e16a531b-78ee-4c57-aade-411b473191b5": {
+      "ProjectGuid": "e16a531b-78ee-4c57-aade-411b473191b5",
+      "DisplayName": "Mmu.CleanDdd.QualityTests",
+      "ColorIndex": 9
+    },
+    "80600672-2e26-449c-a614-6b5d0949f266": {
+      "ProjectGuid": "80600672-2e26-449c-a614-6b5d0949f266",
+      "DisplayName": "Mmu.CleanDdd.Meetings.Application",
+      "ColorIndex": 10
+    }
+  },
+  "NextColorIndex": 11
+}

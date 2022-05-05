@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<AssemblyName />
+		<UserSecretsId>7fd5a883-12fa-4c39-bf51-a81800e53c72</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Lamar.Microsoft.DependencyInjection" Version="6.0.0" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Dependencies\Mmu.CleanDdd.Dependencies.csproj" />
+		<ProjectReference Include="..\Modules\Individuals\Application\Mmu.CleanDdd.Individuals.Application.csproj" />
+		<ProjectReference Include="..\Modules\Meetings\Application\Mmu.CleanDdd.Meetings.Application.csproj" />
+	</ItemGroup>
+
+</Project>
