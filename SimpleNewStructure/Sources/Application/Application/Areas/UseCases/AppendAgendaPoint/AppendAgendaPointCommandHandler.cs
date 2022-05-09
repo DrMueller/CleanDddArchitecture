@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using JetBrains.Annotations;
 using MediatR;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Maybes;
-using Mmu.CleanDddSimple.DataAccess.UnitOfWorks;
 using Mmu.CleanDddSimple.Domain.Data.Repositories;
 using Mmu.CleanDddSimple.Domain.Data.UnitOfWorks;
 

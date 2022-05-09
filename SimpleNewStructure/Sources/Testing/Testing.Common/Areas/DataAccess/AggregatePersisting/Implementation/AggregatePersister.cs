@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Collections;
-using Mmu.CleanDddSimple.DataAccess.UnitOfWorks;
 using Mmu.CleanDddSimple.Domain.Data.Repositories;
 using Mmu.CleanDddSimple.Domain.Data.UnitOfWorks;
 using Mmu.CleanDddSimple.Domain.Models.Base;

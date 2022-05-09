@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
+using AutoFixture;
 using FluentAssertions;
-using Mmu.CleanDddSimple.Application.Areas.Dtos;
 using Mmu.CleanDddSimple.Application.Areas.UseCases.CreateMeeting;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Eithers;
 using Mmu.CleanDddSimple.Domain.Models;
@@ -15,10 +15,7 @@ namespace Mmu.CleanDddSimple.DatabaseTests.TestingAreas.Application.Areas.UseCas
         public async Task CreatingMeeting_CreatesMeeting()
         {
             // Arrange
-            var command = new CreateMeetingCommand(
-                "Name",
-                "Desc",
-                MeetingTypeDto.Long);
+            var command = new Fixture().Create<CreateMeetingCommand>();
 
             // Act
             var result = await _sut.Handle(command, CancellationToken.None);

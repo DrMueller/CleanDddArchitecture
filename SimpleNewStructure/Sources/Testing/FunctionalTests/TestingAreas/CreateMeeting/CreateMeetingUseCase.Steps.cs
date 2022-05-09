@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
+using AutoFixture;
 using FluentAssertions;
-using Mmu.CleanDddSimple.Application.Areas.Dtos;
 using Mmu.CleanDddSimple.Application.Areas.UseCases.CreateMeeting;
 using Mmu.CleanDddSimple.Domain.Models;
 using Mmu.CleanDddSimple.FunctionalTests.TestingInfrastructure.ApiCommunication.Models;
@@ -18,12 +18,7 @@ namespace Mmu.CleanDddSimple.FunctionalTests.TestingAreas.CreateMeeting
         public CreateMeetingUseCase(WebApiTestFixture fixture)
             : base(fixture)
         {
-            _requestDto = new CreateMeetingRequestDto
-            {
-                Description = "Description4321",
-                MeetingType = MeetingTypeDto.Long,
-                Name = "Name1234"
-            };
+            _requestDto = new Fixture().Create<CreateMeetingRequestDto>();
         }
 
         private Task Then_the_creation_succeeded()

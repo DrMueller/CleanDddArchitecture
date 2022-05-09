@@ -6,7 +6,6 @@ using MediatR;
 using Mmu.CleanDddSimple.DataAccess.DbContexts.Contexts.Implementation;
 using Mmu.CleanDddSimple.DataAccess.DbContexts.Factories;
 using Mmu.CleanDddSimple.DataAccess.DbContexts.Factories.Implementation;
-using Mmu.CleanDddSimple.DataAccess.UnitOfWorks;
 using Mmu.CleanDddSimple.DataAccess.UnitOfWorks.Implementation;
 using Mmu.CleanDddSimple.Domain.Data.UnitOfWorks;
 using Mmu.CleanDddSimple.Domain.Models.Base;

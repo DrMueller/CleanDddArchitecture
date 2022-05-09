@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Mmu.CleanDddSimple.DataAccess.UnitOfWorks;
 using Mmu.CleanDddSimple.Domain.Data.Repositories;
 using Mmu.CleanDddSimple.Domain.Data.UnitOfWorks;
 using Moq;

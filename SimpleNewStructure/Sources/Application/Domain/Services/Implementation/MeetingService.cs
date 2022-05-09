@@ -3,7 +3,6 @@ using JetBrains.Annotations;
 using Mmu.CleanDddSimple.CrossCutting.Errors;
 using Mmu.CleanDddSimple.CrossCutting.Errors.Implementation;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Eithers;
-using Mmu.CleanDddSimple.DataAccess.UnitOfWorks;
 using Mmu.CleanDddSimple.Domain.Data.Repositories;
 using Mmu.CleanDddSimple.Domain.Data.UnitOfWorks;
 using Mmu.CleanDddSimple.Domain.Models;
