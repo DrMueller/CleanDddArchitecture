@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.DbContexts.Contexts.Implementation;
+using Mmu.CleanDddSimple.DataAccess.DbContexts.Contexts.Implementation;
 
 namespace Mmu.CleanDddSimple.Migrations
 {

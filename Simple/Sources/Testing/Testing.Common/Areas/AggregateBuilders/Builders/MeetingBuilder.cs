@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using Mmu.CleanDddSimple.Areas.Domain.Models;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.LanguageExtensions.Collections;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.LanguageExtensions.Types.Maybes;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.LanguageExtensions.Types.Maybes.Implementation;
+using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Collections;
+using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Maybes;
+using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Maybes.Implementation;
+using Mmu.CleanDddSimple.Domain.Models;
 using Mmu.CleanDddSimple.Testing.Common.Areas.AggregateBuilders.Builders.Base;
 
 namespace Mmu.CleanDddSimple.Testing.Common.Areas.AggregateBuilders.Builders

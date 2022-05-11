@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.Services.Settings.Config.Services;
-using Mmu.CleanDddSimple.Infrastructure.Web.Initialization;
-using Mmu.CleanDddSimple.Infrastructure.Web.Security;
+using Mmu.CleanDddSimple.CrossCutting.Services.Settings.Config.Services;
+using Mmu.CleanDddSimple.Web.Infrastructure.Initialization;
+using Mmu.CleanDddSimple.Web.Infrastructure.Security;
 
 namespace Mmu.CleanDddSimple
 {

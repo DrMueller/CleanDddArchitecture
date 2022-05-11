@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.DependencyInjection;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.DbContexts.Factories;
+using Mmu.CleanDddSimple.DataAccess.DbContexts.Factories;
 using Mmu.CleanDddSimple.Testing.Common.Areas.DataAccess.DbContexts.Factories;
 using Xunit;
 

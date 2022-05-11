@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 using Docker.DotNet;
 using Docker.DotNet.Models;
 using JetBrains.Annotations;
+using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Maybes;
 using Mmu.CleanDddSimple.DatabaseTests.TestingInfrastructure.Docker.Services.Servants;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.LanguageExtensions.Types.Maybes;
 
 namespace Mmu.CleanDddSimple.DatabaseTests.TestingInfrastructure.Docker.Services.Implementation
 {

@@ -1,8 +1,8 @@
 ﻿using JetBrains.Annotations;
 using Lamar;
 using Microsoft.Extensions.DependencyInjection;
+using Mmu.CleanDddSimple.CrossCutting.Services.Settings.Provisioning.Services;
 using Mmu.CleanDddSimple.DatabaseTests.TestingInfrastructure.Settings.Provisioning.Services;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.Services.Settings.Provisioning.Services;
 
 namespace Mmu.CleanDddSimple.DatabaseTests.TestingInfrastructure.DependencyInjection
 {

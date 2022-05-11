@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.Repositories;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.UnitOfWorks;
+using Mmu.CleanDddSimple.Domain.Data.Repositories;
+using Mmu.CleanDddSimple.Domain.Data.UnitOfWorks;
 using Moq;
 
 namespace Mmu.CleanDddSimple.UnitTests.TestingInfrastructure.Mocks

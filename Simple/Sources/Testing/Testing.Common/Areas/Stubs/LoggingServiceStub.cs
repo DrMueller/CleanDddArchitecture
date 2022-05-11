@@ -1,5 +1,5 @@
 ﻿using System;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.Services.Logging;
+using Mmu.CleanDddSimple.CrossCutting.Services.Logging;
 
 namespace Mmu.CleanDddSimple.Testing.Common.Areas.Stubs
 {

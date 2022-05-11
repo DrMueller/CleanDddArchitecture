@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using JetBrains.Annotations;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.LanguageExtensions.Types.Maybes;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.Repositories;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.UnitOfWorks;
-using Mmu.CleanDddSimple.Infrastructure.Domain.ModelAbstractions;
+using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Maybes;
+using Mmu.CleanDddSimple.Domain.Data.Repositories;
+using Mmu.CleanDddSimple.Domain.Data.UnitOfWorks;
+using Mmu.CleanDddSimple.Domain.Models.Base;
 
 namespace Mmu.CleanDddSimple.Testing.Common.Areas.DataAccess.AggregateLoading.Implementation
 {

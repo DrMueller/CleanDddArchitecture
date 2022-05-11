@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.LanguageExtensions.Collections;
+using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Collections;
 using Mmu.CleanDddSimple.UnitTests.TestingInfrastructure.ConstructorTesting.Models;
 using Mmu.CleanDddSimple.UnitTests.TestingInfrastructure.ConstructorTesting.Services.Servants;
 using Mmu.CleanDddSimple.UnitTests.TestingInfrastructure.StringBuilders;

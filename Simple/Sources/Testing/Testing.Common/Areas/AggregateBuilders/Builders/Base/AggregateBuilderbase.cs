@@ -1,5 +1,5 @@
 ﻿using JetBrains.Annotations;
-using Mmu.CleanDddSimple.Infrastructure.Domain.ModelAbstractions;
+using Mmu.CleanDddSimple.Domain.Models.Base;
 
 namespace Mmu.CleanDddSimple.Testing.Common.Areas.AggregateBuilders.Builders.Base
 {

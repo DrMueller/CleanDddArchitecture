@@ -1,9 +1,9 @@
 ﻿using System;
 using JetBrains.Annotations;
 using Microsoft.EntityFrameworkCore;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.DbContexts.Contexts;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.DbContexts.Contexts.Implementation;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.DbContexts.Factories;
+using Mmu.CleanDddSimple.DataAccess.DbContexts.Contexts;
+using Mmu.CleanDddSimple.DataAccess.DbContexts.Contexts.Implementation;
+using Mmu.CleanDddSimple.DataAccess.DbContexts.Factories;
 
 namespace Mmu.CleanDddSimple.Testing.Common.Areas.DataAccess.DbContexts.Factories
 {

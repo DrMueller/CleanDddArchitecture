@@ -1,8 +1,8 @@
 ﻿using JetBrains.Annotations;
 using Lamar;
 using Microsoft.Extensions.DependencyInjection;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.Services.Logging;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.Services.Settings.Provisioning.Services;
+using Mmu.CleanDddSimple.CrossCutting.Services.Logging;
+using Mmu.CleanDddSimple.CrossCutting.Services.Settings.Provisioning.Services;
 using Mmu.CleanDddSimple.Testing.Common.Areas.Stubs;
 
 namespace Mmu.CleanDddSimple.Testing.Common.Areas.DependencyInjection

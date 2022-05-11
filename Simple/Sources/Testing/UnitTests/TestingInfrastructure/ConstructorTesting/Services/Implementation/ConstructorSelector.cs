@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.LanguageExtensions.Invariance;
+using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Invariance;
 
 namespace Mmu.CleanDddSimple.UnitTests.TestingInfrastructure.ConstructorTesting.Services.Implementation
 {

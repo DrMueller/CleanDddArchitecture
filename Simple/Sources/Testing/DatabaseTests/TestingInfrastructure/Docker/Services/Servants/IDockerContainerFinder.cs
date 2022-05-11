@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.LanguageExtensions.Types.Maybes;
+using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Maybes;
 
 namespace Mmu.CleanDddSimple.DatabaseTests.TestingInfrastructure.Docker.Services.Servants
 {

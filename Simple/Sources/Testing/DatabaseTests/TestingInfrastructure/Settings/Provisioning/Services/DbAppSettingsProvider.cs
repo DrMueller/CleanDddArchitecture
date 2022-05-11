@@ -1,6 +1,6 @@
-﻿using Mmu.CleanDddSimple.DatabaseTests.TestingInfrastructure.Docker;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.Services.Settings.Provisioning.Models;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.Services.Settings.Provisioning.Services;
+﻿using Mmu.CleanDddSimple.CrossCutting.Services.Settings.Provisioning.Models;
+using Mmu.CleanDddSimple.CrossCutting.Services.Settings.Provisioning.Services;
+using Mmu.CleanDddSimple.DatabaseTests.TestingInfrastructure.Docker;
 
 namespace Mmu.CleanDddSimple.DatabaseTests.TestingInfrastructure.Settings.Provisioning.Services
 {

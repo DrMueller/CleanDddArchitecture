@@ -10,6 +10,7 @@
 
 
 	<ItemGroup>
+		<PackageReference Include="AutoFixture" Version="4.17.0" />
 		<PackageReference Include="Docker.DotNet" Version="3.125.5" />
 		<PackageReference Include="FluentAssertions" Version="5.10.3" />
 		<PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0">

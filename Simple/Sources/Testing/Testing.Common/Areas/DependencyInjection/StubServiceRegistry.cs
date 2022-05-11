@@ -1,5 +1,5 @@
 ﻿using Lamar;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.DbContexts.Factories;
+using Mmu.CleanDddSimple.DataAccess.DbContexts.Factories;
 using Mmu.CleanDddSimple.Testing.Common.Areas.DataAccess.DbContexts.Factories;
 
 namespace Mmu.CleanDddSimple.Testing.Common.Areas.DependencyInjection

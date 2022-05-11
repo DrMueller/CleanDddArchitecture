@@ -1,6 +1,6 @@
 ﻿using JetBrains.Annotations;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.Services.Settings.Provisioning.Models;
-using Mmu.CleanDddSimple.Infrastructure.CrossCutting.Services.Settings.Provisioning.Services;
+using Mmu.CleanDddSimple.CrossCutting.Services.Settings.Provisioning.Models;
+using Mmu.CleanDddSimple.CrossCutting.Services.Settings.Provisioning.Services;
 
 namespace Mmu.CleanDddSimple.Testing.Common.Areas.Stubs
 {

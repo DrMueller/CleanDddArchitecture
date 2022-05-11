@@ -3,10 +3,10 @@ using FluentAssertions;
 using JetBrains.Annotations;
 using Lamar;
 using Microsoft.EntityFrameworkCore;
+using Mmu.CleanDddSimple.DataAccess.DbContexts.Contexts.Implementation;
+using Mmu.CleanDddSimple.DataAccess.DbContexts.Factories;
+using Mmu.CleanDddSimple.DataAccess.DbContexts.Factories.Implementation;
 using Mmu.CleanDddSimple.DatabaseTests.TestingInfrastructure.Docker.Services;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.DbContexts.Contexts.Implementation;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.DbContexts.Factories;
-using Mmu.CleanDddSimple.Infrastructure.DataAccess.DbContexts.Factories.Implementation;
 using Mmu.CleanDddSimple.Testing.Common.Areas.DependencyInjection;
 using Xunit;
 

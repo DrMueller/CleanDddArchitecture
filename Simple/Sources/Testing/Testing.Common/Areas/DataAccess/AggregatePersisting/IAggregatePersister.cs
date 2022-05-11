@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Mmu.CleanDddSimple.Infrastructure.Domain.ModelAbstractions;
+using Mmu.CleanDddSimple.Domain.Models.Base;
 
 namespace Mmu.CleanDddSimple.Testing.Common.Areas.DataAccess.AggregatePersisting
 {
