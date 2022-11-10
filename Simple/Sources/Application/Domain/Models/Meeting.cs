@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
+using Mmu.CleanDddSimple.CrossCutting.DeepCopying;
 using Mmu.CleanDddSimple.CrossCutting.Errors;
 using Mmu.CleanDddSimple.CrossCutting.Errors.Implementation;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Invariance;
@@ -31,7 +32,7 @@ namespace Mmu.CleanDddSimple.Domain.Models
         public string Description { get; }
         public MeetingType MeetingType { get; }
         public string Name { get; }
-        public IReadOnlyCollection<Participant> Participants => _participants;
+        public IReadOnlyCollection<Participant> Participants => _participants.DeepCopyCollection();
 
         public Either<ServerError, Participant> AddParticipant(string name)
         {
