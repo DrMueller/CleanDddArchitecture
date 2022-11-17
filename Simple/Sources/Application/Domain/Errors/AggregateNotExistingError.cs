@@ -1,6 +1,7 @@
+using Mmu.CleanDddSimple.CrossCutting.Errors;
 using Mmu.CleanDddSimple.Domain.Models.Base;
 
-namespace Mmu.CleanDddSimple.CrossCutting.Errors.Implementation
+namespace Mmu.CleanDddSimple.Domain.Errors
 {
     public class AggregateNotExistingError<TAg> : ServerError
         where TAg : IAggregateRoot

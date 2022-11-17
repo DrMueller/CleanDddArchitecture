@@ -1,10 +1,10 @@
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Invariance;
 
-namespace Mmu.CleanDddSimple.CrossCutting.Errors.Implementation
+namespace Mmu.CleanDddSimple.CrossCutting.Errors
 {
-    public class GenericError : ServerError
+    public class GenericServerError : ServerError
     {
-        public GenericError(string errorMessage)
+        public GenericServerError(string errorMessage)
         {
             Guard.StringNotNullOrEmpty(() => errorMessage);
 

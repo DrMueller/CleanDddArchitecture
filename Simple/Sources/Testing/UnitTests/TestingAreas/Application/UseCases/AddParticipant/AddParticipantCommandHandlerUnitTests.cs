@@ -4,10 +4,10 @@ using AutoMoqCore;
 using FluentAssertions;
 using Mmu.CleanDddSimple.Application.UseCases.AddParticipant;
 using Mmu.CleanDddSimple.CrossCutting.Errors;
-using Mmu.CleanDddSimple.CrossCutting.Errors.Implementation;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Maybes;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Maybes.Implementation;
 using Mmu.CleanDddSimple.Domain.Data.Repositories;
+using Mmu.CleanDddSimple.Domain.Errors;
 using Mmu.CleanDddSimple.Domain.Models;
 using Mmu.CleanDddSimple.UnitTests.TestingInfrastructure.Mocks;
 using Moq;
@@ -40,7 +40,7 @@ namespace Mmu.CleanDddSimple.UnitTests.TestingAreas.Application.UseCases.AddPart
         {
             // Arrange
             var meetingMock = new Mock<IMeeting>();
-            var error = new GenericError("Test1234");
+            var error = new GenericServerError("Test1234");
 
             _meetingRepoMock.Setup(
                     f => f.LoadSingleAsync(
@@ -56,7 +56,7 @@ namespace Mmu.CleanDddSimple.UnitTests.TestingAreas.Application.UseCases.AddPart
 
             // Assert
             actualResult.Should().BeOfType<Some<ServerError>>();
-            var actualError = (GenericError)actualResult.ReduceThrow();
+            var actualError = (GenericServerError)actualResult.ReduceThrow();
             actualError.ErrorMessage.Should().Be(error.ErrorMessage);
             _uowFactoryMock.UnitOfWorkMock.Verify(f => f.SaveAsync(), Times.Never);
         }

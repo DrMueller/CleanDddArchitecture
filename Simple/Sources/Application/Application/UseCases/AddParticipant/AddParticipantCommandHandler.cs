@@ -2,11 +2,11 @@
 using System.Threading.Tasks;
 using MediatR;
 using Mmu.CleanDddSimple.CrossCutting.Errors;
-using Mmu.CleanDddSimple.CrossCutting.Errors.Implementation;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Eithers;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Maybes;
 using Mmu.CleanDddSimple.Domain.Data.Repositories;
 using Mmu.CleanDddSimple.Domain.Data.UnitOfWorks;
+using Mmu.CleanDddSimple.Domain.Errors;
 using Mmu.CleanDddSimple.Domain.Models;
 
 namespace Mmu.CleanDddSimple.Application.UseCases.AddParticipant

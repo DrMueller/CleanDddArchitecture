@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using JetBrains.Annotations;
 using Mmu.CleanDddSimple.CrossCutting.Errors;
-using Mmu.CleanDddSimple.CrossCutting.Errors.Implementation;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Eithers;
 using Mmu.CleanDddSimple.Domain.Data.Repositories;
 using Mmu.CleanDddSimple.Domain.Data.UnitOfWorks;
@@ -29,7 +28,7 @@ namespace Mmu.CleanDddSimple.Domain.Services.Implementation
 
             if (meetingExists)
             {
-                return new GenericError($"Meeting with the name {name} already exists.");
+                return new GenericServerError($"Meeting with the name {name} already exists.");
             }
 
             var meeting = new Meeting(

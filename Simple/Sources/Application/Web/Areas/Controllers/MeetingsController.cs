@@ -12,7 +12,7 @@ using Mmu.CleanDddSimple.Web.Areas.Dtos;
 
 namespace Mmu.CleanDddSimple.Web.Areas.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [ApiController]
     [Route("api/[controller]")]
     public class MeetingsController : ControllerBase

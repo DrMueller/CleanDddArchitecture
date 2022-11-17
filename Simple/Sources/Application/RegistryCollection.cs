@@ -10,7 +10,7 @@ using Mmu.CleanDddSimple.DataAccess.UnitOfWorks.Implementation;
 using Mmu.CleanDddSimple.Domain.Data.UnitOfWorks;
 using Mmu.CleanDddSimple.Domain.Models.Base;
 
-namespace Mmu.CleanDddSimple.CrossCutting.DependencyInjection
+namespace Mmu.CleanDddSimple
 {
     [UsedImplicitly]
     public class RegistryCollection : ServiceRegistry

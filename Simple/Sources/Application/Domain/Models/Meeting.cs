@@ -3,7 +3,6 @@ using System.Linq;
 using JetBrains.Annotations;
 using Mmu.CleanDddSimple.CrossCutting.DeepCopying;
 using Mmu.CleanDddSimple.CrossCutting.Errors;
-using Mmu.CleanDddSimple.CrossCutting.Errors.Implementation;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Invariance;
 using Mmu.CleanDddSimple.CrossCutting.LanguageExtensions.Types.Eithers;
 using Mmu.CleanDddSimple.Domain.Models.Base;
@@ -38,7 +37,7 @@ namespace Mmu.CleanDddSimple.Domain.Models
         {
             if (_participants.Any(f => f.Name == name))
             {
-                return new GenericError($"Participant with name {name} is already added.");
+                return new GenericServerError($"Participant with name {name} is already added.");
             }
 
             var participant = new Participant(name);
