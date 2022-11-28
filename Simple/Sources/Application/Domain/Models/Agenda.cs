@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
+using Mmu.CleanDddSimple.CrossCutting.DeepCopying;
 using Mmu.CleanDddSimple.Domain.Models.Base;
 
 namespace Mmu.CleanDddSimple.Domain.Models
@@ -17,7 +18,7 @@ namespace Mmu.CleanDddSimple.Domain.Models
 
         public long MeetingId { get; }
 
-        public IReadOnlyCollection<AgendaPoint> Points => _points.ToList();
+        public IReadOnlyCollection<AgendaPoint> Points => _points.DeepCopyCollection();
 
         public void AddAgendaPoint(string descriptionText)
         {
